@@ -1,0 +1,143 @@
+
+<!--
+	LOOK FOR "MOD HERE" COMMENTS to find the juicy bits
+	
+	Not sure about the damage model (min/max). It is random or distance-based ?
+	
+	I like the new gunfights better, they look more realistic in terms of hit ratio (people can actually hit each other!)
+	But there is an issue with surrendering, it seems to happen a lot. The code might be tilted towards number of hits rather than actual damage ?
+	
+VANILLA VALUES FOR REFERENCE:
+Shotgun:
+<weapon fullLight="true" gunType="Rifle" id="0" speed="15" type="Gun">
+<gunModes>
+	<l accuracy="0" afterCool="0.7" defMode="true" preCool="0.05" projectiles="5" type="MultiShot" />
+</gunModes>
+<damageTypes>
+	<l damageType="Bullet" type="Person">
+		<level max="2" min="1" />
+	</l>
+	<l damageTier="HeavyFurniture" type="Structure" />
+</damageTypes>
+
+-->
+<data>
+	<Product>
+	</Product>
+  <Element>
+  </Element>
+  	<Item>
+		<item _annotation="Shotgun" eid="0" handness="TwoHand" mid="729">
+			<name tid="504" />
+			<desc tid="505" />
+			<anims>
+				<l dir="D1" inFront="true" leftArmInFront="true" leftBehindItem="false" offX="-1" offY="-2" rightArmInFront="false" rightBehindItem="false" type="ItemSingleOffseted" useFlipped="false">
+					<animation aid="shotgun1-3" />
+				</l>
+				<l dir="D6" inFront="true" leftArmInFront="false" leftBehindItem="false" offX="2" offY="1" rightArmInFront="false" rightBehindItem="false" type="ItemSingleOffseted" useFlipped="true">
+					<animation aid="shotgun1-2" />
+				</l>
+				<l dir="D2" inFront="true" leftArmInFront="false" leftBehindItem="false" offX="-4" offY="-4" rightArmInFront="false" rightBehindItem="false" type="ItemSingleOffseted" useFlipped="true">
+					<animation aid="shotgun1-6" />
+				</l>
+				<l dir="D3" inFront="true" leftArmInFront="true" leftBehindItem="true" offX="9" offY="-5" rightArmInFront="true" rightBehindItem="false" type="ItemSingleOffseted" useFlipped="false">
+					<animation aid="shotgun1-1" />
+				</l>
+				<l dir="D9" inFront="false" leftArmInFront="false" leftBehindItem="false" offX="3" offY="-8" rightArmInFront="true" rightBehindItem="false" type="ItemSingleOffseted" useFlipped="true">
+					<animation aid="shotgun1-7" />
+				</l>
+				<l dir="D8" inFront="false" leftArmInFront="true" leftBehindItem="false" offX="-5" offY="-1" rightArmInFront="true" rightBehindItem="false" type="ItemSingleOffseted" useFlipped="true">
+					<animation aid="shotgun1-6" />
+				</l>
+			</anims>
+			<fabricateable cat="Weapons">
+				<GUIAnim aid="shotgun1inv" />
+				<cost buildTools="0" partsPerTile="1" type="Defined">
+					<resources>
+						<l _annotation="Steel Plates" consumeEvery="1" element="1922" howMuch="1" />
+						<l _annotation="Plastics" consumeEvery="1" element="175" howMuch="1" />
+					</resources>
+					<difficultyLevel level="1" skill="Construction" />
+				</cost>
+			</fabricateable>
+			<!-- MOD HERE FOR BULLET SPEED -->
+			<weapon fullLight="true" gunType="Rifle" id="0" speed="12" type="Gun">
+				<flare>
+					<flareProjectile aid="smallProjectile1" />
+					<flareEffect effect="718" />
+				</flare>
+				<gunModes>
+					<!-- MOD HERE FOR SHOTGUN RATE OF FIRE 
+					-->
+					<l accuracy="10" afterCool=".9" defMode="true" preCool="0.1" projectiles="4" type="MultiShot" />
+				</gunModes>
+				<weaponAnims>
+					<l dir="D1" inFront="false" leftArmInFront="true" leftBehindItem="false" rightArmInFront="false" rightBehindItem="false" type="ItemSingle" useFlipped="false">
+						<animation aid="shotgun1-1" />
+					</l>
+					<l dir="D2" inFront="true" leftArmInFront="true" leftBehindItem="false" rightArmInFront="false" rightBehindItem="false" type="ItemSingle" useFlipped="false">
+						<animation aid="shotgun1-2" />
+					</l>
+					<l dir="D3" inFront="true" leftArmInFront="true" leftBehindItem="true" rightArmInFront="true" rightBehindItem="false" type="ItemSingle" useFlipped="false">
+						<animation aid="shotgun1-3" />
+					</l>
+					<l dir="D4" inFront="false" leftArmInFront="true" leftBehindItem="false" rightArmInFront="false" rightBehindItem="false" type="ItemSingle" useFlipped="false">
+						<animation aid="shotgun1-4" />
+					</l>
+					<l dir="D6" inFront="true" leftArmInFront="false" leftBehindItem="false" rightArmInFront="true" rightBehindItem="false" type="ItemSingle" useFlipped="false">
+						<animation aid="shotgun1-6" />
+					</l>
+					<l dir="D7" inFront="false" leftArmInFront="false" leftBehindItem="false" rightArmInFront="false" rightBehindItem="false" type="ItemSingle" useFlipped="false">
+						<animation aid="shotgun1-7" />
+					</l>
+					<l dir="D8" inFront="false" leftArmInFront="false" leftBehindItem="false" rightArmInFront="true" rightBehindItem="false" type="ItemSingle" useFlipped="false">
+						<animation aid="shotgun1-8" />
+					</l>
+					<l dir="D9" inFront="true" leftArmInFront="false" leftBehindItem="false" rightArmInFront="true" rightBehindItem="false" type="ItemSingle" useFlipped="false">
+						<animation aid="shotgun1-9" />
+					</l>
+				</weaponAnims>
+				<projectile orig_aid="smallProjectile2" aid="5042_smallProjectile2"/>
+				<hit aid="2explosionWallhit2" />
+				<audio noise="10.0">
+					<audio auid="3612" />
+				</audio>
+				<bulletEffect effect="393" />
+				<light color="537080fe" powerTier="None" skipCenter="false">
+					<offset x="0" y="0" />
+					<flood brightness="300" distance="6" />
+				</light>
+				<damageTypes>
+					<!-- MOD HERE FOR SHOTGUN DAMAGE 
+					-->
+					<l damageType="Bullet" type="Person">
+						<level min="1" max="4" />
+					</l>
+					<l damageTier="HeavyFurniture" type="Structure" />
+				</damageTypes>
+				<positions>
+					<l direction="D1" offX="-15" offY="23" />
+					<l direction="D2" offX="-5" offY="16" />
+					<l direction="D3" offX="10" offY="20" />
+					<l direction="D6" offX="16" offY="26" />
+					<l direction="D9" offX="14" offY="33" />
+					<l direction="D8" offX="4" offY="38" />
+					<l direction="D7" offX="-10" offY="34" />
+					<l direction="D4" offX="-16" offY="27" />
+				</positions>
+				<bulletEffectPos>
+					<l direction="D6" offX="-11" offY="-1" />
+					<l direction="D4" offX="9" offY="0" />
+					<l direction="D1" offX="8" offY="5" />
+					<l direction="D3" offX="-8" offY="4" />
+					<l direction="D2" offX="0" offY="4" />
+					<l direction="D7" offX="7" offY="-3" />
+					<l direction="D8" offX="0" offY="-4" />
+					<l direction="D9" offX="-7" offY="-4" />
+				</bulletEffectPos>
+				<muzzle instance="10_AllMuzzles_muzzle2" />
+			</weapon>
+			<backPackItem id="747" />
+		</item>
+	</Item>
+</data>

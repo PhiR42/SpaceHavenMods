@@ -1,0 +1,16 @@
+<AllAnimations>
+	<animations>
+	<ba f="30" id="3040" ks="1" n="5042_smallProjectile2">
+		<bones>
+			<b id="0">
+				<pos>
+					<p col="-1" f="1" r="0" sx="1" sy="1" x="0" y="0" />
+				</pos>
+			</b>
+		</bones>
+		<items>
+			<assetPos a="2191" bi="0" r="0" sx=".5" sy=".5" vf="1:1" x="0" y="0" />
+		</items>
+	</ba>
+	</animations>
+</AllAnimations>

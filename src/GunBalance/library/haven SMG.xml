@@ -1,0 +1,154 @@
+
+<!--
+	LOOK FOR "MOD HERE" COMMENTS to find the juicy bits
+	
+	Not sure about the damage model (min/max). It is random or distance-based ?
+	
+	I like the new gunfights better, they look more realistic in terms of hit ratio (people can actually hit each other!)
+	But there is an issue with surrendering, it seems to happen a lot. The code might be tilted towards number of hits rather than actual damage ?
+	
+VANILLA VALUES FOR REFERENCE:
+  SMG:
+<weapon fullLight="true" gunType="Rifle" id="0" speed="25" type="Gun">
+<gunModes>
+	<l accuracy="40" afterCool="0.7" defMode="false" preCool="0.05" shotInterval="0.1" shots="3" type="BurstShot" />
+</gunModes>
+<damageTypes>
+	<l damageType="Bullet" type="Person">
+		<level max="3" min="1" />
+	</l>
+	<l damageTier="HeavyFurniture" type="Structure" />
+
+</damageTypes>
+
+
+-->
+<data>
+	<Product>
+	</Product>
+  <Element>
+  </Element>
+  	<Item>
+		<item _annotation="SMG" eid="0" handness="TwoHand" mid="728">
+			<name tid="502" />
+			<desc tid="503" />
+			<anims>
+				<l dir="D1" inFront="true" leftArmInFront="true" leftBehindItem="false" offX="-1" offY="-2" rightArmInFront="false" rightBehindItem="false" type="ItemSingleOffseted" useFlipped="false">
+					<animation aid="smg1-3" />
+				</l>
+				<l dir="D6" inFront="true" leftArmInFront="false" leftBehindItem="false" offX="2" offY="0" rightArmInFront="false" rightBehindItem="false" type="ItemSingleOffseted" useFlipped="true">
+					<animation aid="smg1-2" />
+				</l>
+				<l dir="D2" inFront="true" leftArmInFront="false" leftBehindItem="false" offX="-4" offY="-4" rightArmInFront="false" rightBehindItem="false" type="ItemSingleOffseted" useFlipped="true">
+					<animation aid="smg1-6" />
+				</l>
+				<l dir="D3" inFront="true" leftArmInFront="false" leftBehindItem="false" offX="6" offY="-5" rightArmInFront="true" rightBehindItem="false" type="ItemSingleOffseted" useFlipped="false">
+					<animation aid="smg1-1" />
+				</l>
+				<l dir="D9" inFront="false" leftArmInFront="false" leftBehindItem="false" offX="3" offY="-7" rightArmInFront="true" rightBehindItem="false" type="ItemSingleOffseted" useFlipped="true">
+					<animation aid="smg1-7" />
+				</l>
+				<l dir="D8" inFront="false" leftArmInFront="true" leftBehindItem="false" offX="-3" offY="-2" rightArmInFront="true" rightBehindItem="false" type="ItemSingleOffseted" useFlipped="true">
+					<animation aid="smg1-6" />
+				</l>
+			</anims>
+			<offset x="0" y="0" />
+			<invIcon aid="smg1inv" />
+			<fabricateable cat="Weapons">
+				<GUIAnim aid="smg1inv" />
+				<cost buildTools="0" partsPerTile="1" type="Defined">
+					<resources>
+						<l _annotation="Steel Plates" consumeEvery="2" element="1922" howMuch="1" />
+						<l _annotation="Plastics" consumeEvery="1" element="175" howMuch="1" />
+					</resources>
+					<difficultyLevel level="2" skill="Construction" />
+				</cost>
+			</fabricateable>
+			<!-- MOD HERE FOR BULLET SPEED -->
+			<weapon fullLight="true" gunType="Rifle" id="0" speed="18" type="Gun">
+				<flare>
+					<flareProjectile aid="smallProjectile2" />
+					<flareEffect effect="718" />
+				</flare>
+				<gunModes>
+					<!-- MOD HERE FOR SMG RATE OF FIRE 
+					increased burst speed by reducing shotInterval
+					precool reduced as smg is easy to aim/wield
+					aftercool reduced slighlty
+					-->
+					<l accuracy="70" afterCool="0.55" defMode="false" preCool="0.15" shotInterval="0.1" shots="3" type="BurstShot" />
+				</gunModes>
+				<weaponAnims>
+					<l dir="D1" inFront="false" leftArmInFront="true" leftBehindItem="false" rightArmInFront="false" rightBehindItem="false" type="ItemSingle" useFlipped="false">
+						<animation aid="smg1-1" />
+					</l>
+					<l dir="D2" inFront="true" leftArmInFront="true" leftBehindItem="false" rightArmInFront="false" rightBehindItem="false" type="ItemSingle" useFlipped="false">
+						<animation aid="smg1-2" />
+					</l>
+					<l dir="D3" inFront="true" leftArmInFront="false" leftBehindItem="false" rightArmInFront="true" rightBehindItem="false" type="ItemSingle" useFlipped="false">
+						<animation aid="smg1-3" />
+					</l>
+					<l dir="D4" inFront="false" leftArmInFront="true" leftBehindItem="false" rightArmInFront="false" rightBehindItem="false" type="ItemSingle" useFlipped="false">
+						<animation aid="smg1-4" />
+					</l>
+					<l dir="D6" inFront="true" leftArmInFront="false" leftBehindItem="false" rightArmInFront="true" rightBehindItem="false" type="ItemSingle" useFlipped="false">
+						<animation aid="smg1-6" />
+					</l>
+					<l dir="D7" inFront="false" leftArmInFront="false" leftBehindItem="false" rightArmInFront="false" rightBehindItem="false" type="ItemSingle" useFlipped="false">
+						<animation aid="smg1-7" />
+					</l>
+					<l dir="D8" inFront="false" leftArmInFront="false" leftBehindItem="false" rightArmInFront="true" rightBehindItem="false" type="ItemSingle" useFlipped="false">
+						<animation aid="smg1-8" />
+					</l>
+					<l dir="D9" inFront="true" leftArmInFront="false" leftBehindItem="false" rightArmInFront="true" rightBehindItem="false" type="ItemSingle" useFlipped="false">
+						<animation aid="smg1-9" />
+					</l>
+				</weaponAnims>
+				<projectile aid="smallProjectile2" />
+				<hit aid="2explosionWallhit2" />
+				<audio noise="10.0">
+					<audio auid="990" />
+				</audio>
+				<bulletEffect effect="1018" />
+				<light color="537080fe" powerTier="None" skipCenter="false">
+					<offset x="0" y="0" />
+					<flood brightness="300" distance="6" />
+				</light>
+				<projectileLight color="401b00fe" powerTier="None" skipCenter="false">
+					<flood brightness="200" distance="2" />
+				</projectileLight>
+				<damageTypes>
+					<!-- MOD HERE FOR SMG BULLET DAMAGE
+					Bullet now do reliable dmg
+					-->
+					<l damageType="Bullet" type="Person">
+						<level min="3" max="4" />
+					</l>
+					<l damageTier="HeavyFurniture" type="Structure" />
+				</damageTypes>
+				<positions>
+					<l direction="D1" offX="-14" offY="23" />
+					<l direction="D2" offX="-5" offY="17" />
+					<l direction="D3" offX="8" offY="20" />
+					<l direction="D6" offX="13" offY="25" />
+					<l direction="D9" offX="11" offY="32" />
+					<l direction="D8" offX="3" offY="37" />
+					<l direction="D7" offX="-14" offY="34" />
+					<l direction="D4" offX="-16" offY="26" />
+				</positions>
+				<bulletEffectPos>
+					<l direction="D1" offX="6" offY="4" />
+					<l direction="D2" offX="0" offY="5" />
+					<l direction="D3" offX="-6" offY="4" />
+					<l direction="D6" offX="-6" offY="0" />
+					<l direction="D9" offX="-4" offY="-2" />
+					<l direction="D8" offX="1" offY="-3" />
+					<l direction="D7" offX="4" offY="1" />
+					<l direction="D4" offX="6" offY="2" />
+				</bulletEffectPos>
+				<muzzle instance="10_AllMuzzles_muzzle1" />
+			</weapon>
+			<backPackItem id="747" />
+		</item>
+	</Item>
+</data>

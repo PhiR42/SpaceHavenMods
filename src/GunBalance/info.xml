@@ -1,0 +1,17 @@
+<mod>
+  <name>Gun balance</name>
+  <description>Updates the guns for more realistic balance
+  	Pistol should be generally weak, but still decent until medium range
+  	Shotgun devastating at short ranges but mediocre further
+  	SMG balanced
+  	Assault Rifle good at all distances, but dominating at long distances by reliably landing shots. At short distances, SMGs and shotguns will do more damage during the 1 exchange of fire. 
+  	
+  	KNOWN ISSUES: It seems each bullet hit (no matter how small) will trigger a surrender roll. I've made the shotgun shoot LESS pellets not more to account for this
+  </description>
+  <modVersion>0.2</modVersion>
+  <author>PhiR</author>
+  <minimumLoaderVersion>0.0.6</minimumLoaderVersion>
+  <gameVersions>
+    <v>0.4.1</v>
+  </gameVersions>
+</mod>
