@@ -1,0 +1,101 @@
+<data>
+	<Product>
+	</Product>
+  <Element>
+<!-- CUSTOM ELEMENTS HAVE IDS STARTING WITH 5042 (that's my discord id, choose another prefix for yourself :)
+This is basically a copy of the X1 toilets with some minor alterations, see below
+-->
+		
+  <!-- ok something simple -->
+		<me _name="X0 Toilet" alternateY="false" costGroup="949" ec="8" mid="50420133" nonSymmetrical="false" offsetRot="R0">
+			<data>
+				<!-- move grid offset here -->
+				<l eid="1" gridOffX="0" gridOffY="0" layer="0" type="Object">
+					<element id="0" lightValue="Low" renderOnFloor="false" userTogglable="false" walkGridCost="255">
+						<definedStates>
+							<l playAnimation="false" state="Standby">
+								<!-- update with new animations -->
+								<r0 aid="5042_X0toilet1F3" flx="false" />
+								<r90 aid="5042_X0toilet1F1" flx="false" />
+								<r180 aid="5042_X0toilet1B7" flx="false" />
+								<r270 aid="5042_X0toilet1B9" flx="false" />
+								<tasks>
+									<l dir="D3" gridOffX="0" gridOffY="0" setStateInUse="false" task="Sit" usage="Both">
+										<activate activateOffX="0" activateOffY="-1" />
+										<r0offset charOffX="12" charOffY="-4" />
+										<r180offset charOffX="-10" charOffY="4" />
+										<r90offset charOffX="-5" charOffY="-8" />
+										<r180InFront x="0" y="0">
+											<front aid="toilet1bmask" />
+										</r180InFront>
+									</l>
+								</tasks>
+							</l>
+						</definedStates>
+						<additionaFullLit atInuse="true" atNoPower="false" atStandby="true" mirX="0" mirY="0" x="0" y="0">
+							<r0 aid="toilet1F3light" flx="false" />
+							<r90 aid="toilet1F1light" flx="false" />
+							<r180 aid="toilet1B7light" flx="false" />
+							<r270 aid="toilet1B9light" flx="false" />
+						</additionaFullLit>
+						<features addFacilityIcons="true" inUseState="true" noPressureDmg="false" normalState="true" produceInNormal="true">
+    <!-- CHANGE POOPS PER WATER HERE -->
+							<toilet dumpsNeeded="1">
+								<gives>
+								<!-- 
+									keep the 'gives' tag because the code needs it but remove all children
+									<l consumeEvery="1" element="16" howMuch="1" />
+								-->
+								</gives>
+							</toilet>
+							<noiseAndComfort onlyWhenInuse="false" reduceNegative="false">
+								<radiusBeauty radius="4" roomDrop="30" value="-15" />
+							</noiseAndComfort>
+						</features>
+						<!-- this was merged from the other element to avoid crashing. It's like the power socket ?-->
+						<commonPower />
+					</element>
+				</l>
+			</data>
+			<!--
+			<linked>
+				<l damageGroup="0" eid="6" gridOffX="0" gridOffY="0" id="902" layer="0" rot="R0" />
+				<l damageGroup="0" eid="7" gridOffX="0" gridOffY="-1" id="1093" layer="0" rot="R0" />
+			</linked>
+			-->
+			<events />
+			<objectInfo buildInstant="false" debugOnly="false" disableAirlockTest="false" disableBuildTest="false" disableRotation="false" placeInMenu="0" systemPoints="0" viewMode="Normal">
+				<cu>
+					<groups>
+	<!-- THIS ONE I HAVENT FIGURED OUT YET, IF YOU DO PLEASE LET ME KNOW! 
+	I think it's the ressources needed for reparing -->
+						<l buildTools="0" rep="875">
+							<customPrice>
+								<l _annotated_name="Infrablock" elementId="162" howMuch="2" />
+								<l _annotated_name="Electronics Component" elementId="173" howMuch="1" />
+							</customPrice>
+						</l>
+    <!-- CHANGE CONSTRUCTION PRICE HERE -->
+						<l buildTools="10" rep="949">
+							<customPrice>
+								<l _annotated_name="Infrablock" elementId="162" howMuch="1" />
+								<l _annotated_name="Soft block" elementId="1921" howMuch="1" />
+							</customPrice>
+						</l>
+					</groups>
+				</cu>
+    <!-- CHANGE NAME AND DESCRIPTION HERE, references entries in texts.xml -->
+				<name tid="50420144" />
+				<desc tid="50420145" />
+    <!-- CHANGE BUILD MENU AND INFO ICON, references 'ba' entries through the attribute 'n' in animations.xml -->
+				<guiIcon aid="build_icon_X0toilet" />
+				<subCat id="1507" />
+	<!-- moved restriction at the facility is smaller -->
+				<restrictions>
+					<l gridX="0" gridY="-1" sizeX="1" sizeY="1" type="Floor" />
+				</restrictions>
+				<difficultyLevel level="1" skill="Construction" />
+			</objectInfo>
+		</me>
+  </Element>
+</data>

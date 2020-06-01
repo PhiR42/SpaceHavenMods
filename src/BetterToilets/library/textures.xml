@@ -1,0 +1,16 @@
+<AllTexturesAndRegions>
+	<textures>
+	    <!-- create an gfx asset for us, referenced by its attribute 'i' (it'll be 357.cim on the filesystem) -->
+		<t i="5042" w="200" h="100"/>
+	</textures>
+	<regions>
+	    <!-- define a region in that asset, here it's everything
+		"n" is the attribute for referencing. 
+		It looks like regions are stored as an array in the code, so they have to be consecutive.
+		The modloader takes care of remapping the ids when running the game		
+		-->
+		<re n="504202283" t="5042" x="0" y="0" w="100" h="100"/>
+		<!-- current icon is a placeholder, just the 652 toilet game asset until i can get a better one -->
+		<re n="504202284" t="5042" x="100" y="0" w="52" h="42"/>
+	</regions>
+</AllTexturesAndRegions>

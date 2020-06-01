@@ -1,0 +1,137 @@
+<data>
+	<Product>
+	</Product>
+  <Element>
+<!-- CUSTOM ELEMENTS HAVE IDS STARTING WITH 5042 (that's my discord id, choose another prefix for yourself :)
+This is basically a copy of the X1 toilets with some minor alterations, see below
+-->
+		<me _name="X2 Toilet" alternateY="false" costGroup="949" ec="8" mid="50420123" nonSymmetrical="false" offsetRot="R0">
+			<data>
+				<l eid="1" gridOffX="1" gridOffY="1" layer="0" type="Object">
+					<element id="0" lightValue="Low" renderOnFloor="false" userTogglable="false" walkGridCost="255">
+						<definedStates>
+							<l playAnimation="false" state="Standby">
+								<r0 aid="5042_X2toilet1F3" flx="false" />
+								<r90 aid="5042_X2toilet1F1" flx="false" />
+								<r180 aid="5042_X2toilet1B7" flx="false" />
+								<r270 aid="5042_X2toilet1B9" flx="false" />
+								<tasks>
+									<l dir="D3" gridOffX="0" gridOffY="0" setStateInUse="false" task="Sit" usage="Both">
+										<activate activateOffX="0" activateOffY="-1" />
+										<r0offset charOffX="12" charOffY="-4" />
+										<r180offset charOffX="-10" charOffY="4" />
+										<r90offset charOffX="-5" charOffY="-8" />
+										<r180InFront x="0" y="0">
+											<front aid="toilet1bmask" />
+										</r180InFront>
+									</l>
+								</tasks>
+							</l>
+						</definedStates>
+						<additionaFullLit atInuse="true" atNoPower="false" atStandby="true" mirX="0" mirY="0" x="0" y="0">
+							<r0 aid="toilet1F3light" flx="false" />
+							<r90 aid="toilet1F1light" flx="false" />
+							<r180 aid="toilet1B7light" flx="false" />
+							<r270 aid="toilet1B9light" flx="false" />
+						</additionaFullLit>
+						<features addFacilityIcons="false" inUseState="true" noPressureDmg="false" normalState="true" produceInNormal="false">
+    <!-- CHANGE RECYCLING HERE -->
+							<toilet dumpsNeeded="5">
+								<gives>
+									<!-- same number of dumps needed but twice the water -->
+									<l _annotated_name="Water" consumeEvery="1" element="16" howMuch="2" />
+									<!-- i would like to add another minor output but the consumeEvery attribute is ignored 
+									a workaround would be to increase the dumpsNeeded and output 1 something + multiple water
+									-->
+								</gives>
+							</toilet>
+	<!-- confort malus -->
+							<noiseAndComfort onlyWhenInuse="false" reduceNegative="false">
+								<radiusBeauty radius="5" roomDrop="30" value="-20" />
+							</noiseAndComfort>
+						</features>
+					</element>
+				</l>
+				<l eid="4" gridOffX="0" gridOffY="1" layer="0" type="Object">
+					<element id="0" lightValue="High" renderOnFloor="false" userTogglable="false" walkGridCost="255">
+						<definedStates>
+							<l playAnimation="true" state="Standby">
+								<r0 aid="5042_X2toilet2F3" flx="false" />
+								<r90 aid="5042_X2toilet2F1" flx="false" />
+								<r180 aid="5042_X2toilet2B7" flx="false" />
+								<r270 aid="5042_X2toilet2B9" flx="false" />
+							</l>
+						</definedStates>
+						<additionaFullLit atInuse="true" atNoPower="false" atStandby="true" mirX="0" mirY="0" x="0" y="0">
+							<r0 aid="toilet2F3light" flx="false" />
+							<r90 aid="toilet2F1light" flx="false" />
+							<r180 aid="toilet2B7light" flx="false" />
+							<r270 aid="toilet2B9light" flx="false" />
+						</additionaFullLit>
+						<features addFacilityIcons="false" inUseState="true" noPressureDmg="false" normalState="true" produceInNormal="false">
+							<stateWatchdog autoproduce="false" />
+						</features>
+						<boxHatch boxX="18" boxY="4" flipR90="true" in="true" out="true" x="18" y="4">
+							<activate activateOffX="0" activateOffY="-1" />
+							<r90Pos boxX="-10" boxY="1" x="-10" y="1" />
+							<customHatch aid="boxhatch" />
+						</boxHatch>
+						<commonPower />
+					</element>
+				</l>
+			</data>
+			<linked>
+				<!-- This is how you specify the tiles that are used
+				eid sounds like local id. 
+				so 902 must be a regular kind of tiles. Type of tiles related to power management ? 
+				FIXME 902 tiles dont seem to restrict access, so we get unreachable on the back tiles
+				watch out gridoffset is relative to rotation 0, with other rotations the offsets rotates as well. Better to debug the animation/tiles at rotation 0 first, more intuitive (which isn't what I did, and it took me a long while to figure out)
+				-->
+				<l damageGroup="0" eid="6" gridOffX="0" gridOffY="1" id="902" layer="0" rot="R0" />
+				<!-- 
+								id references a type of tile apparently ? 1093 seems like floor decoration (yellow/black striped dont stand on zone ?)
+				-->
+				<l damageGroup="0" eid="7" gridOffX="0" gridOffY="0" id="1093" layer="0" rot="R0" />
+				<!-- new tiles for the back of the toilet -->
+				<l damageGroup="0" eid="8" gridOffX="0" gridOffY="2" id="902" layer="0" rot="R0" />
+				<l damageGroup="0" eid="9" gridOffX="1" gridOffY="2" id="902" layer="0" rot="R0" />
+			</linked>
+			<events />
+			<objectInfo buildInstant="false" debugOnly="false" disableAirlockTest="false" disableBuildTest="false" disableRotation="false" placeInMenu="1" systemPoints="0" viewMode="Normal">
+				<cu>
+					<groups>
+	<!-- THIS ONE I HAVENT FIGURED OUT YET, IF YOU DO PLEASE LET ME KNOW! 
+	Maybe related to moving the facility ? -->
+						<l buildTools="0" rep="875">
+							<customPrice>
+								<l _annotated_name="Infrablock" elementId="162" howMuch="2" />
+								<l _annotated_name="Electronics Component" elementId="173" howMuch="1" />
+							</customPrice>
+						</l>
+    <!-- CHANGE CONSTRUCTION PRICE HERE -->
+						<l buildTools="40" rep="949">
+							<customPrice>
+								<l _annotated_name="Infrablock" elementId="162" howMuch="1" />
+								<l _annotated_name="Techblock" elementId="930" howMuch="1" />
+								<l _annotated_name="Energy block" elementId="1919" howMuch="1" />
+								<l _annotated_name="Soft block" elementId="1921" howMuch="1" />
+							</customPrice>
+						</l>
+					</groups>
+				</cu>
+    <!-- CHANGE NAME AND DESCRIPTION HERE, references entries in texts.xml -->
+
+				<name tid="50420134" />
+				<desc tid="50420135" />
+    <!-- CHANGE BUILD MENU AND INFO ICON, references 'ba' entries through the attribute 'n' in animations.xml -->
+				<guiIcon aid="build_icon_X2toilet" />
+				<subCat id="1507" />
+				<restrictions>
+					<l gridX="1" gridY="0" sizeX="1" sizeY="1" type="Floor" />
+				</restrictions>
+	<!-- skill required to build -->
+				<difficultyLevel level="3" skill="Construction" />
+			</objectInfo>
+		</me>
+  </Element>
+</data>

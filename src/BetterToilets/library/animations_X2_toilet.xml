@@ -1,0 +1,239 @@
+<AllAnimations>
+  <animations>
+    <!-- create an "animation" with the new region from textures, referenced by its attribute 'n' 
+   'id' seems to be an index in the animations file, not sure how to handle that for now (just keep it unique)
+    -->
+    <ba n="build_icon_X2toilet" f="30" ks="1" id="504204434">
+      <bones>
+        <b id="0">
+          <pos>
+            <p f="1" x="0" y="0" sx="1" sy="1" r="0" col="-1"/>
+          </pos>
+        </b>
+      </bones>
+      <items>
+      <!-- attribute "a" references the "re" node, indexes by "n". The modloader will remap this id when running the game (should be transparent) -->
+        <assetPos vf="1:1" bi="0" x="0" y="0" sx="1" sy="1" r="0" a="504202283"/>
+      </items>
+    </ba>
+    <!-- we duplicate the toilet animations to add new elements (reusing ingame textures for that purpose) 
+    this one is the orientation by defaut (same as shown in the build menu, and when trying to build one)
+    FIXME some clipping issues with the added elements...
+    FIXME also when building the toilet the new parts appear instantly instead of being built
+  -->
+    <ba n="5042_X2toilet1F3" f="30" ks="1" id="2444">
+      <bones>
+        <b id="0">
+          <pos>
+            <p f="1" x="4" y="6" sx="1" sy="1" r="0" col="-1"/>
+          </pos>
+          <c>
+            <b id="3">
+              <pos>
+                <p f="1" x="-4" y="17" sx="1" sy="1" r="0" col="-1"/>
+              </pos>
+            </b>
+          </c>
+        </b>
+      </bones>
+      <items>
+      <!-- new element, added on same bone as the toilet seat 
+         adding the new element, bottom
+        vf is unknown ? 
+        bi bone id. Refer to the bones defined above. Each corresponding to a tile or something else ? 6 is the bone id of the toilet seat
+        x and y offset for positionning. In that case that would relate to the bone's position ? positive x is right/up, positive y is up/left
+        sx/sy I assume scale. You can flip textures left/right with sx = -1, up/down with sy = -1. 
+        When scale is -1, x /y offsets are also inverted!! 
+        r rotation 
+        a is the reference of the texture
+        Those two are roughly correctly placed, but I need to mirror the 278 because it doesn't have the proper orientations.
+        This is only textures, actual tiles occupied on the ground are defined in haven.xml in linked tags
+
+        x and y are relative to the reference of the bone locaton. positive x to the right, positive y up. 
+        Do note that the x/y does not match the visual tile grid, which is turned 45°. tiles seem to be 50x50, so going a full tile diagonaly is 71 (sqrt(5000))
+        Also x/y directions are influenced either by the rotation and/or the sx/sy sign. I haven't figured it out exactly how but proper alignement of multiple tiles when rotated qzis painful. 
+        Order is be important, assets will be rendered in the order defined FOR EACH BONE, meaning they should generally be listed back to front here (same for bones ?)
+        -->
+        <assetPos _name="blue drum" vf="1:1" bi="0" x="-42" y="30" sx="1" sy="1" r="0" a="399"/>
+        <!-- vanilla -->
+        <assetPos _annotated_name="gray tile" a="670" bi="0" r="0" sx="1" sy="1" vf="1:1" x="-4" y="-6" />
+        <assetPos _annotated_name="Toilet seat R" a="650" bi="0" r="0" sx="1" sy="1" vf="1:1" x="4" y="0" />
+        
+        <assetPos _annotated_name="Small bin R" a="1223" bi="3" r="0" sx="1" sy="1" vf="1:1" x="0" y="0" />
+        <assetPos _annotated_name="Small pipe" a="1211" bi="3" r="0" sx="1" sy="1" vf="1:1" x="-15" y="-10" />
+        <assetPos _annotated_name="Small pipe" a="1211" bi="3" r="0" sx="1" sy="1" vf="1:1" x="-15" y="-22" />
+      </items>
+    </ba>
+    <ba f="30" id="2442" ks="1" n="5042_X2toilet2F3">
+      <bones>
+        <b id="0">
+          <pos>
+            <p col="-1" f="1" r="0" sx="1" sy="1" x="-4" y="2" />
+          </pos>
+        </b>
+      </bones>
+      <items>
+        <!-- element behind the cabinet, watch out for sx-1 meaning inverted x -->
+        <assetPos _annotated_name="pump element R" vf="1:1" bi="0" x="29" y="37" sx="-1" sy="1" r="0" a="266"/>
+        <!-- vanilla -->
+        <assetPos _annotated_name="gray tile" a="670" bi="0" r="0" sx="1" sy="1" vf="1:1" x="4" y="-2" />
+        <assetPos _annotated_name="Cabinet w/ sink R" a="397" bi="0" r="0" sx="1" sy="1" vf="1:1" x="6" y="22" />
+        <assetPos _annotated_name="In/Out slot (open)" a="1121" bi="0" r="0" sx="1" sy="1" vf="1:1" x="20" y="3" />
+      </items>
+    </ba>
+
+    <!-- toilet facing down to the left. This is rotation 90. It seems x is inverted in this case (sx -1 on the bone 0) -->
+    <ba n="5042_X2toilet1F1" f="30" ks="1" id="4628">
+      <bones>
+        <b id="0">
+          <pos>
+            <p f="1" x="0" y="0" sx="-1" sy="1" r="0" col="-1"/>
+          </pos>
+          <c>
+            <b id="3">
+              <pos>
+                <p f="1" x="-12" y="13" sx="1" sy="1" r="0" col="-1"/>
+              </pos>
+            </b>
+            <b id="6">
+              <pos>
+                <p f="1" x="0" y="0" sx="1" sy="1" r="0" col="-1"/>
+              </pos>
+            </b>
+            <b id="7">
+              <pos>
+                <p f="1" x="0" y="0" sx="1" sy="1" r="0" col="-1"/>
+              </pos>
+            </b>
+          </c>
+        </b>
+      </bones>
+      <items>
+      <!-- new elements, added on same bone as the toilet seat. X is inverted because of the bone sx-1 -->
+        <assetPos _annotated_name="blue drum" vf="1:1" bi="6" x="-32" y="34" sx="1" sy="1" r="0" a="399"/>
+        <!-- vanilla gfx -->
+        <assetPos _annotated_name="gray tile" a="670" bi="0" r="0" sx="1" sy="1" vf="1:1" x="0" y="0" />
+        <assetPos _annotated_name="Small pipe" a="1211" bi="3" r="0" sx="1" sy="1" vf="1:1" x="19" y="0" />
+        <assetPos _annotated_name="Small pipe" a="1211" bi="3" r="0" sx="1" sy="1" vf="1:1" x="19" y="12" />
+        <assetPos _annotated_name="Toilet seat R" a="650" bi="6" r="0" sx="1" sy="1" vf="1:1" x="0" y="2" />
+        <assetPos _annotated_name="Small bin R" a="1223" bi="7" r="0" sx="1" sy="1" vf="1:1" x="-8" y="19" />
+      </items>
+    </ba>
+    <ba n="5042_X2toilet2F1" f="30" ks="1" id="4630">
+      <bones>
+        <b id="0">
+          <pos>
+            <p f="1" x="4" y="2" sx="-1" sy="1" r="0" col="-1"/>
+          </pos>z
+        </b>
+      </bones>
+      <items>
+        <!-- added. Here sx is -1 but it cancels out with the -1 of the bone sx so x has its usual orientation -->
+        <assetPos _annotated_name="pump element" vf="1:1" bi="0" x="33" y="33" sx="-1" sy="1" r="0" a="277"/>
+        <!-- vanilla -->
+        <assetPos _annotated_name="gray tile" a="670" bi="0" r="0" sx="1" sy="1" vf="1:1" x="4" y="-2" />
+        <assetPos _annotated_name="Cabinet w/ sink R" a="397" bi="0" r="0" sx="1" sy="1" vf="1:1" x="-2" y="19" />
+        <assetPos _annotated_name="In/Out slot (open)" a="1121" bi="0" r="0" sx="1" sy="1" vf="1:1" x="12" y="0" />
+      </items>
+    </ba>
+    <!-- toilet seat facing up/right -->
+    <ba n="5042_X2toilet1B9" f="30" ks="1" id="4629">
+      <bones>
+        <b id="0">
+          <pos>
+            <p f="1" x="-2" y="15" sx="-1" sy="1" r="0" col="-1"/>
+          </pos>
+          <c>
+            <b id="2">
+              <pos>
+                <p f="1" x="8" y="4" sx="1" sy="1" r="0" col="-1"/>
+              </pos>
+            </b>
+          </c>
+        </b>
+      </bones>
+      <items>
+        <assetPos _annotated_name="gray tile" a="670" bi="0" r="0" sx="1" sy="1" vf="1:1" x="-2" y="-15" />
+        <assetPos _annotated_name="Toilet seat L" a="776" bi="0" r="0" sx="1" sy="1" vf="1:1" x="-2" y="-5" />
+        <assetPos _annotated_name="Small bin L" a="1228" bi="2" r="0" sx="1" sy="1" vf="1:1" x="0" y="0" />
+        <assetPos _annotated_name="Small pipe" a="1217" bi="2" r="0" sx="1" sy="1" vf="1:1" x="-30" y="-16" />
+        <assetPos _annotated_name="Small pipe" a="1217" bi="2" r="0" sx="1" sy="1" vf="1:1" x="-20" y="-22" />
+      <!-- new element, added on same bone as the toilet seat
+      X is inverted for this bone
+      -->
+        <assetPos  _annotated_name="blue drum" vf="1:1" bi="2" x="20" y="-18" sx="1" sy="1" r="0" a="399"/>
+        
+      </items>
+    </ba>
+    <ba f="30" id="4631" ks="1" n="5042_X2toilet2B9">
+      <bones>
+        <b id="0">
+          <pos>
+            <p col="-1" f="1" r="0" sx="-1" sy="1" x="-4" y="22" />
+          </pos>
+        </b>
+      </bones>
+      <items>
+        <!-- vanilla -->
+        <assetPos _annotated_name="gray tile" a="670" bi="0" r="0" sx="1" sy="1" vf="1:1" x="-4" y="-22" />
+        <assetPos _annotated_name="Cabinet w/ sink L" a="444" bi="0" r="0" sx="1" sy="1" vf="1:1" x="4" y="0" />
+        <!-- added. sx is cancelled by the bone sx so x and y have regular orientations
+        FIXME There is a small clipping bug here, as the green lights from the bin at the back of cabinet a rendered above the pump -->
+        <assetPos _annotated_name="pump element R" vf="1:1" bi="0" x="-30" y="-17" sx="-1" sy="1" r="0" a="266"/>
+      </items>
+    </ba>
+    <!-- rotation 180 -->
+     <ba n="5042_X2toilet1B7" f="30" ks="1" id="2443">
+      <bones>
+        <b id="0">
+          <pos>
+            <p f="1" x="-6" y="11" sx="1" sy="1" r="0" col="-1"/>
+          </pos>
+          <c>
+            <b id="2">
+              <pos>
+                <p f="1" x="8" y="4" sx="1" sy="1" r="0" col="-1"/>
+              </pos>
+            </b>
+            <b id="6">
+              <pos>
+                <p f="1" x="0" y="0" sx="1" sy="1" r="0" col="-1"/>
+              </pos>
+            </b>
+            <b id="7">
+              <pos>
+                <p f="1" x="8" y="4" sx="1" sy="1" r="0" col="-1"/>
+              </pos>
+            </b>
+          </c>
+        </b>
+      </bones>
+      <items>
+        <assetPos _name="small pipe" vf="1:1" bi="2" x="13" y="7" sx="1" sy="1" r="0" a="1211"/>
+        <assetPos _name="small pipe" vf="1:1" bi="2" x="13" y="-5" sx="1" sy="1" r="0" a="1211"/>
+        <assetPos _name="toilet seat" vf="1:1" bi="6" x="-2" y="-5" sx="1" sy="1" r="0" a="776"/>
+        <assetPos _name="small bin L" vf="1:1" bi="7" x="0" y="0" sx="1" sy="1" r="0" a="1222"/>
+        <assetPos _name="gray tile" vf="1:1" bi="0" x="6" y="-11" sx="1" sy="1" r="0" a="670"/>
+      <!-- new element, added on same bone as the bin over the toilet seat. -->
+        <assetPos _name="blue drum" vf="1:1" bi="7" x="30" y="-12" sx="1" sy="1" r="0" a="399"/>
+      <!-- vanila element -->
+      </items>
+    </ba>
+    <ba f="30" id="2445" ks="1" n="5042_X2toilet2B7">
+      <bones>
+        <b id="0">
+          <pos>
+            <p col="-1" f="1" r="0" sx="1" sy="1" x="-4" y="18" />
+          </pos>
+        </b>
+      </bones>
+      <items>qz
+      <!-- vanilla -->
+        <assetPos _annotated_name="gray tile" a="670" bi="0" r="0" sx="1" sy="1" vf="1:1" x="4" y="-18" />
+        <assetPos _annotated_name="Cabinet w/ sink L" a="444" bi="0" r="0" sx="1" sy="1" vf="1:1" x="4" y="0" />
+      <!-- new element. Bug! this one has a clipping issue and will render below other elements the neighboring tile outside the toilet..-->
+        <assetPos _name="pump element" vf="1:1" bi="0" x="-30" y="-15" sx="-1" sy="1" r="0" a="264"/>
+      </items>
+    </ba>
+  </animations>
+</AllAnimations>

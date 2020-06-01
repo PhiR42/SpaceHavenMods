@@ -1,0 +1,22 @@
+<t>
+
+	
+	<object_better_toilet_name id="50420134" pid="121">
+	<EN>X2 Toilet</EN>
+	</object_better_toilet_name>		
+
+	<object_better_toilet_desc id="50420135" pid="121">
+	<EN>An advanced and expensive toilet, capable of extracting more water from waste. Its mecanism is more noisy than the X1 and thus it should be enclosed in a room. </EN>
+	</object_better_toilet_desc>		
+	
+	<object_better_toilet_name id="50420144" pid="121">
+	<EN>X0 Toilet</EN>
+	</object_better_toilet_name>		
+
+	<object_better_toilet_desc id="50420145" pid="121">
+	<EN>A very basic toilet, basically just a hole in the hull.</EN>
+	</object_better_toilet_desc>		
+	
+	
+	
+</t>

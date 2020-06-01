@@ -1,0 +1,147 @@
+<AllAnimations>
+  <animations>
+    <!-- create an "animation" with the new region from textures, referenced by its attribute 'n' 
+   'id' seems to be an index in the animations file, not sure how to handle that for now (just keep it unique)
+    -->
+    <ba n="build_icon_X0toilet" f="30" ks="1" id="504204435">
+      <bones>
+        <b id="0">
+          <pos>
+            <p f="1" x="0" y="0" sx="1" sy="1" r="0" col="-1"/>
+          </pos>
+        </b>
+      </bones>
+      <items>
+      <!-- attribute "a" references the "re" node, indexes by "n". The modloader will remap this id when running the game (should be transparent) -->
+        <assetPos vf="1:1" bi="0" x="0" y="0" sx="1.5" sy="1.5" r="0" a="504202284"/>
+      </items>
+    </ba>
+
+<!-- X0 Toilet, easy just remove stuff -->
+    <ba f="30" id="2443" ks="1" n="5042_X0toilet1B7">
+      <bones>
+        <b id="0">
+          <pos>
+            <p col="-1" f="1" r="0" sx="1" sy="1" x="-6" y="11" />
+          </pos>
+          <c>
+            <!--
+            <b id="2">
+              <pos>
+                <p col="-1" f="1" r="0" sx="1" sy="1" x="8" y="4" />
+              </pos>
+            </b>
+            -->
+            <b id="6">
+              <pos>
+                <p col="-1" f="1" r="0" sx="1" sy="1" x="0" y="0" />
+              </pos>
+            </b>
+            <b id="7">
+              <pos>
+                <p col="-1" f="1" r="0" sx="1" sy="1" x="8" y="4" />
+              </pos>
+            </b>
+          </c>
+        </b>
+      </bones>
+      <items>
+        <!--
+        <assetPos _annotation="Small pipe" a="1217" bi="2" r="0" sx="1" sy="1" vf="1:1" x="13" y="7" />
+        <assetPos _annotation="Small pipe" a="1217" bi="2" r="0" sx="1" sy="1" vf="1:1" x="13" y="-5" />
+      -->
+        <assetPos _annotation="Toilet seat L" a="776" bi="6" r="0" sx="1" sy="1" vf="1:1" x="-2" y="-5" />
+        <assetPos _annotation="Small bin L" a="1222" bi="7" r="0" sx="1" sy="1" vf="1:1" x="0" y="0" />
+        <assetPos _annotation="gray tile" a="670" bi="0" r="0" sx="1" sy="1" vf="1:1" x="6" y="-11" />
+      </items>
+    </ba>
+    <ba f="30" id="2444" ks="1" n="5042_X0toilet1F3">
+      <bones>
+        <b id="0">
+          <pos>
+            <p col="-1" f="1" r="0" sx="1" sy="1" x="4" y="6" />
+          </pos>
+          <c>
+            <b id="3">
+              <pos>
+                <p col="-1" f="1" r="0" sx="1" sy="1" x="-4" y="17" />
+              </pos>
+            </b>
+          </c>
+        </b>
+      </bones>
+      <items>
+        <assetPos _annotation="gray tile" a="670" bi="0" r="0" sx="1" sy="1" vf="1:1" x="-4" y="-6" />
+        <assetPos _annotation="Toilet seat R" a="650" bi="0" r="0" sx="1" sy="1" vf="1:1" x="4" y="0" />
+        <assetPos _annotation="Small bin R" a="1223" bi="3" r="0" sx="1" sy="1" vf="1:1" x="0" y="0" />
+        <!--
+        <assetPos _annotation="Small pipe" a="1217" bi="3" r="0" sx="1" sy="1" vf="1:1" x="-15" y="-10" />
+        <assetPos _annotation="Small pipe" a="1217" bi="3" r="0" sx="1" sy="1" vf="1:1" x="-15" y="-22" />
+      -->
+      </items>
+    </ba>
+    <ba f="30" id="4628" ks="1" n="5042_X0toilet1F1">
+      <bones>
+        <b id="0">
+          <pos>
+            <p col="-1" f="1" r="0" sx="-1" sy="1" x="0" y="0" />
+          </pos>
+          <c>
+            <!--
+            <b id="3">
+              <pos>
+                <p col="-1" f="1" r="0" sx="1" sy="1" x="-12" y="13" />
+              </pos>
+            </b>
+          -->
+            <b id="6">
+              <pos>
+                <p col="-1" f="1" r="0" sx="1" sy="1" x="0" y="0" />
+              </pos>
+            </b>
+            <b id="7">
+              <pos>
+                <p col="-1" f="1" r="0" sx="1" sy="1" x="0" y="0" />
+              </pos>
+            </b>
+          </c>
+        </b>
+      </bones>
+      <items>
+        <assetPos _annotation="gray tile" a="670" bi="0" r="0" sx="1" sy="1" vf="1:1" x="0" y="0" />
+        <!--
+        <assetPos _annotation="Small pipe" a="1217" bi="3" r="0" sx="1" sy="1" vf="1:1" x="19" y="0" />
+        <assetPos _annotation="Small pipe" a="1217" bi="3" r="0" sx="1" sy="1" vf="1:1" x="19" y="12" />
+      -->
+        <assetPos _annotation="Toilet seat R" a="650" bi="6" r="0" sx="1" sy="1" vf="1:1" x="0" y="2" />
+        <assetPos _annotation="Small bin R" a="1223" bi="7" r="0" sx="1" sy="1" vf="1:1" x="-8" y="19" />
+      </items>
+    </ba>
+    <ba f="30" id="4629" ks="1" n="5042_X0toilet1B9">
+      <bones>
+        <b id="0">
+          <pos>
+            <p col="-1" f="1" r="0" sx="-1" sy="1" x="-2" y="15" />
+          </pos>
+          <c>
+            <b id="2">
+              <pos>
+                <p col="-1" f="1" r="0" sx="1" sy="1" x="8" y="4" />
+              </pos>
+            </b>
+          </c>
+        </b>
+      </bones>
+      <items>
+        <assetPos _annotation="gray tile" a="670" bi="0" r="0" sx="1" sy="1" vf="1:1" x="-2" y="-15" />
+        <assetPos _annotation="Toilet seat L" a="776" bi="0" r="0" sx="1" sy="1" vf="1:1" x="-2" y="-5" />
+        <assetPos _annotation="Small bin L" a="1222" bi="2" r="0" sx="1" sy="1" vf="1:1" x="0" y="0" />
+        <!--
+        <assetPos _annotation="Small pipe" a="1217" bi="2" r="0" sx="1" sy="1" vf="1:1" x="-30" y="-16" />
+        <assetPos _annotation="Small pipe" a="1217" bi="2" r="0" sx="1" sy="1" vf="1:1" x="-20" y="-22" />
+      -->
+      </items>
+    </ba>
+
+  </animations>
+</AllAnimations>
