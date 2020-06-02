@@ -5,16 +5,19 @@
   	- X2 Toilet with better water recycling capability
   
   This should also serve as an tutorial for modders as it both modifies existing textures and add new ones. XML files are heavily commented with explainations. 
-  
-  KNOWN ISSUES: 
+
+  </description>
+<knownIssues>
    - construction animation on the new elements in the X2 toilet (drums at the back)
    - bad clipping on the new elements in the X2 toilet (drums at the back)
    - unreachable warning for the tile at the back of the X2 toilet
    - the X2 toilet show "5 poop to 1 water" in the build menu, even though it will output 2 waters
    - the X0 toilet show "1 poop to 1 water" in the build menu, even though it doesn't produce any water
-  </description>
+</knownIssues>
   <modVersion>0.6</modVersion>
   <author>PhiR</author>
+  <website>https://github.com/PhiR42/SpaceHavenMods</website>
+  <updates>https://github.com/PhiR42/SpaceHavenMods/raw/master/BetterToilets-latest.zip</updates>
   <minimumLoaderVersion>0.0.6</minimumLoaderVersion>
   <gameVersions>
     <v>0.8.19</v>
