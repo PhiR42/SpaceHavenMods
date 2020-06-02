@@ -1,0 +1,184 @@
+<data>
+	<TradingValues>
+		<!-- Only one trade here so we have to copy the whole thing just to modify a few prices -->
+		<trade id="1">
+			<t _annotation="Energium" availability="3" buyZeroPoint="50" defBuyDim="75" defOfferBuyDim="35" desirability="1" eid="158" maxPrice="400">
+				<desires />
+			</t>
+			<t _annotation="Base Metals" availability="10" buyZeroPoint="50" defBuyDim="75" defOfferBuyDim="35" desirability="1" eid="157" maxPrice="200">
+				<desires />
+			</t>
+			<!-- MODIFICATION lowered from 200 -->
+			<t _annotation="Ice" availability="7" buyZeroPoint="50" defBuyDim="75" defOfferBuyDim="35" desirability="1" eid="40" maxPrice="150">
+				<desires />
+			</t>
+			<t _annotation="Noble Metals" availability="5" buyZeroPoint="50" defBuyDim="75" defOfferBuyDim="35" desirability="1" eid="169" maxPrice="400">
+				<desires />
+			</t>
+			<t _annotation="Hyperium" availability="3" buyZeroPoint="50" defBuyDim="75" defOfferBuyDim="35" desirability="1" eid="172" maxPrice="800">
+				<desires />
+			</t>
+			<t _annotation="Raw Chemicals" availability="3" buyZeroPoint="50" defBuyDim="75" defOfferBuyDim="35" desirability="1" eid="171" maxPrice="400">
+				<desires />
+			</t>
+			<t _annotation="Carbon" availability="4" buyZeroPoint="50" defBuyDim="75" defOfferBuyDim="35" desirability="1" eid="170" maxPrice="400">
+				<desires />
+			</t>
+			<!-- MODIFICATION price lowered from 600 -->
+			<t _annotation="Root vegetables" availability="10" buyZeroPoint="50" defBuyDim="75" defOfferBuyDim="35" desirability="100" eid="15" maxPrice="300">
+				<desires>
+					<l availability="0" buyValue="75" desirability="0" dontBuy="true" dontSell="true" offerBuyValue="35" sellValue="100" side="Android" />
+				</desires>
+			</t>
+			<!-- unchanged -->
+			<t _annotation="Fruits" availability="10" buyZeroPoint="50" defBuyDim="75" defOfferBuyDim="35" desirability="100" eid="706" maxPrice="600">
+				<desires>
+					<l availability="0" buyValue="75" desirability="0" dontBuy="true" dontSell="true" offerBuyValue="35" sellValue="100" side="Android" />
+				</desires>
+			</t>
+			<!-- unchanged -->
+			<t _annotation="Artificial meat" availability="10" buyZeroPoint="50" defBuyDim="75" defOfferBuyDim="35" desirability="100" eid="707" maxPrice="900">
+				<desires>
+					<l availability="0" buyValue="75" desirability="0" dontBuy="true" dontSell="true" offerBuyValue="35" sellValue="100" side="Android" />
+				</desires>
+			</t>
+			<!-- unchanged -->
+			<t _annotation="Space food" availability="10" buyZeroPoint="50" defBuyDim="75" defOfferBuyDim="35" desirability="100" eid="712" maxPrice="500">
+				<desires>
+					<l availability="0" buyValue="75" desirability="0" dontBuy="true" dontSell="true" offerBuyValue="35" sellValue="100" side="Android" />
+				</desires>
+			</t>
+			<t _annotation="Monster meat" availability="1" buyZeroPoint="50" defBuyDim="75" defOfferBuyDim="35" desirability="10" eid="984" maxPrice="75">
+				<desires>
+					<l availability="8" buyValue="75" desirability="50" dontBuy="false" dontSell="false" offerBuyValue="35" sellValue="100" side="Cultist" />
+					<l availability="0" buyValue="75" desirability="0" dontBuy="true" dontSell="true" offerBuyValue="35" sellValue="100" side="Android" />
+				</desires>
+			</t>
+			<t _annotation="Human meat" availability="0" buyZeroPoint="50" defBuyDim="75" defOfferBuyDim="35" desirability="0" eid="985" maxPrice="150">
+				<desires>
+					<l availability="0" buyValue="50" desirability="0" dontBuy="true" dontSell="true" offerBuyValue="25" sellValue="100" side="Pirate" />
+					<l availability="0" buyValue="50" desirability="0" dontBuy="true" dontSell="true" offerBuyValue="25" sellValue="100" side="Merchant" />
+					<l availability="0" buyValue="50" desirability="0" dontBuy="true" dontSell="true" offerBuyValue="25" sellValue="100" side="Military" />
+					<l availability="2" buyValue="50" desirability="2" dontBuy="false" dontSell="false" offerBuyValue="25" sellValue="100" side="Slaver" />
+					<l availability="0" buyValue="50" desirability="0" dontBuy="true" dontSell="true" offerBuyValue="25" sellValue="100" side="Android" />
+					<l availability="0" buyValue="50" desirability="0" dontBuy="true" dontSell="true" offerBuyValue="25" sellValue="100" side="Cultist" />
+					<l availability="0" buyValue="50" desirability="0" dontBuy="true" dontSell="true" offerBuyValue="25" sellValue="100" side="Civilian" />
+				</desires>
+			</t>
+			<t _annotation="Processed Food" availability="10" buyZeroPoint="50" defBuyDim="75" defOfferBuyDim="35" desirability="10" eid="179" maxPrice="250">
+				<desires />
+			</t>
+			
+			<!-- MODIFICATION price raised from 70 (not multiplied by 5) -->
+			<t _annotation="Water" availability="7" buyZeroPoint="50" defBuyDim="75" defOfferBuyDim="35" desirability="75" eid="16" maxPrice="250">
+				<desires />
+			</t>
+
+			<t _annotation="Infrablock" availability="20" buyZeroPoint="50" defBuyDim="75" defOfferBuyDim="35" desirability="5" eid="162" maxPrice="190">
+				<desires />
+			</t>
+			<t _annotation="Bio Matter" availability="0" buyZeroPoint="50" defBuyDim="75" defOfferBuyDim="35" desirability="0" eid="71" maxPrice="200">
+				<desires />
+			</t>
+			<t _annotation="Electronics Component" availability="7" buyZeroPoint="50" defBuyDim="75" defOfferBuyDim="35" desirability="11" eid="173" maxPrice="370">
+				<desires />
+			</t>
+			<t _annotation="Energy rod" availability="10" buyZeroPoint="50" defBuyDim="75" defOfferBuyDim="35" desirability="20" eid="174" maxPrice="190">
+				<desires />
+			</t>
+			<t _annotation="Plastics" availability="10" buyZeroPoint="50" defBuyDim="75" defOfferBuyDim="35" desirability="5" eid="175" maxPrice="500">
+				<desires />
+			</t>
+			<t _annotation="Chemicals" availability="0" buyZeroPoint="50" defBuyDim="75" defOfferBuyDim="35" desirability="0" eid="176" maxPrice="250">
+				<desires />
+			</t>
+			<t _annotation="Fabrics" availability="0" buyZeroPoint="50" defBuyDim="75" defOfferBuyDim="35" desirability="0" eid="177" maxPrice="250">
+				<desires />
+			</t>
+			<t _annotation="Hyperfuel" availability="4" buyZeroPoint="50" defBuyDim="75" defOfferBuyDim="35" desirability="50" eid="178" maxPrice="2500">
+				<desires />
+			</t>
+			<t _annotation="Techblock" availability="7" buyZeroPoint="50" defBuyDim="75" defOfferBuyDim="35" desirability="11" eid="930" maxPrice="320">
+				<desires />
+			</t>
+			<t _annotation="Hull Block" availability="10" buyZeroPoint="50" defBuyDim="75" defOfferBuyDim="35" desirability="5" eid="1759" maxPrice="350">
+				<desires />
+			</t>
+			<t _annotation="Rubble" availability="0" buyZeroPoint="50" defBuyDim="75" defOfferBuyDim="35" desirability="0" eid="127" maxPrice="5">
+				<desires />
+			</t>
+			<t _annotation="Five-Seven Pistol" availability="3" buyZeroPoint="50" defBuyDim="75" defOfferBuyDim="35" desirability="10" eid="760" maxPrice="300">
+				<desires>
+					<l availability="15" buyValue="65" desirability="30" dontBuy="false" dontSell="false" offerBuyValue="100" sellValue="75" side="Military" />
+				</desires>
+			</t>
+			<t _annotation="SMG" availability="2" buyZeroPoint="50" defBuyDim="75" defOfferBuyDim="35" desirability="10" eid="728" maxPrice="400">
+				<desires>
+					<l availability="10" buyValue="65" desirability="40" dontBuy="false" dontSell="false" offerBuyValue="100" sellValue="75" side="Military" />
+				</desires>
+			</t>
+			<t _annotation="Shotgun" availability="1" buyZeroPoint="50" defBuyDim="75" defOfferBuyDim="35" desirability="10" eid="729" maxPrice="500">
+				<desires>
+					<l availability="7" buyValue="65" desirability="45" dontBuy="false" dontSell="false" offerBuyValue="100" sellValue="75" side="Military" />
+				</desires>
+			</t>
+			<t _annotation="Assault rifle" availability="1" buyZeroPoint="50" defBuyDim="75" defOfferBuyDim="35" desirability="10" eid="725" maxPrice="600">
+				<desires>
+					<l availability="4" buyValue="65" desirability="50" dontBuy="false" dontSell="false" offerBuyValue="100" sellValue="75" side="Military" />
+				</desires>
+			</t>
+			<t _annotation="Rocket" availability="0" buyZeroPoint="50" defBuyDim="75" defOfferBuyDim="35" desirability="0" eid="446" maxPrice="500">
+				<desires />
+			</t>
+			<t _annotation="Infra Scrap" availability="3" buyZeroPoint="50" defBuyDim="75" defOfferBuyDim="35" desirability="1" eid="1873" maxPrice="25">
+				<desires />
+			</t>
+			<t _annotation="Soft Scrap" availability="2" buyZeroPoint="50" defBuyDim="75" defOfferBuyDim="35" desirability="1" eid="1874" maxPrice="30">
+				<desires />
+			</t>
+			<t availability="3" buyZeroPoint="50" defBuyDim="75" defOfferBuyDim="35" desirability="1" eid="1882" maxPrice="35">
+				<desires />
+			</t>
+			<t _annotation="Fibers" availability="10" buyZeroPoint="50" defBuyDim="75" defOfferBuyDim="35" desirability="10" eid="1932" maxPrice="200">
+				<desires />
+			</t>
+			<t _annotation="Soft block" availability="10" buyZeroPoint="50" defBuyDim="75" defOfferBuyDim="35" desirability="10" eid="1921" maxPrice="150">
+				<desires />
+			</t>
+			<t _annotation="Energy block" availability="10" buyZeroPoint="50" defBuyDim="75" defOfferBuyDim="35" desirability="10" eid="1919" maxPrice="400">
+				<desires />
+			</t>
+			<t _annotation="Superblock" availability="10" buyZeroPoint="50" defBuyDim="75" defOfferBuyDim="35" desirability="10" eid="1920" maxPrice="700">
+				<desires />
+			</t>
+			<t _annotation="Steel Plates" availability="10" buyZeroPoint="50" defBuyDim="75" defOfferBuyDim="35" desirability="10" eid="1922" maxPrice="150">
+				<desires />
+			</t>
+			<t _annotation="Optronics Component" availability="10" buyZeroPoint="50" defBuyDim="75" defOfferBuyDim="35" desirability="10" eid="1924" maxPrice="500">
+				<desires />
+			</t>
+			<t _annotation="Quantronics Component" availability="10" buyZeroPoint="50" defBuyDim="75" defOfferBuyDim="35" desirability="10" eid="1925" maxPrice="750">
+				<desires />
+			</t>
+			<t _annotation="Energy Cell" availability="10" buyZeroPoint="50" defBuyDim="75" defOfferBuyDim="35" desirability="10" eid="1926" maxPrice="450">
+				<desires />
+			</t>
+			<t _annotation="Hull Scrap" availability="10" buyZeroPoint="50" defBuyDim="75" defOfferBuyDim="35" desirability="10" eid="1886" maxPrice="30">
+				<desires />
+			</t>
+			<t _annotation="Tech Scrap" availability="10" buyZeroPoint="50" defBuyDim="75" defOfferBuyDim="35" desirability="10" eid="1946" maxPrice="50">
+				<desires />
+			</t>
+			<t _annotation="Energy Scrap" availability="10" buyZeroPoint="50" defBuyDim="75" defOfferBuyDim="35" desirability="10" eid="1947" maxPrice="55">
+				<desires />
+			</t>
+			<t _annotation="Medical Supplies" availability="10" buyZeroPoint="50" defBuyDim="75" defOfferBuyDim="35" desirability="10" eid="2053" maxPrice="500">
+				<desires />
+			</t>
+			<t _annotation="IV Fluid" availability="10" buyZeroPoint="50" defBuyDim="75" defOfferBuyDim="35" desirability="10" eid="2058" maxPrice="500">
+				<desires />
+			</t>
+			
+		</trade>
+	</TradingValues>
+</data>

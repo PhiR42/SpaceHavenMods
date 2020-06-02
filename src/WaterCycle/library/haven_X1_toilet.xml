@@ -1,0 +1,107 @@
+<data>
+  <Element>
+  	<!-- The only difference with stock toilet is the recycling rate -->
+		<me _element_name_0="X1 Toilet" alternateY="false" costGroup="949" ec="8" mid="123" nonSymmetrical="false" offsetRot="R0">
+			<data>
+				<l eid="1" gridOffX="1" gridOffY="1" layer="0" type="Object">
+					<element id="0" lightValue="Low" renderOnFloor="false" userTogglable="false" walkGridCost="255">
+						<definedStates>
+							<l playAnimation="false" state="Standby">
+								<r0 aid="toilet1F3" flx="false" />
+								<r90 aid="toilet1F1" flx="false" />
+								<r180 aid="toilet1B7" flx="false" />
+								<r270 aid="toilet1B9" flx="false" />
+								<tasks>
+									<l dir="D3" gridOffX="0" gridOffY="0" setStateInUse="false" task="Sit" usage="Both">
+										<activate activateOffX="0" activateOffY="-1" />
+										<r0offset charOffX="12" charOffY="-4" />
+										<r180offset charOffX="-10" charOffY="4" />
+										<r90offset charOffX="-5" charOffY="-8" />
+										<r180InFront x="0" y="0">
+											<front aid="toilet1bmask" />
+										</r180InFront>
+									</l>
+								</tasks>
+							</l>
+						</definedStates>
+						<additionaFullLit atInuse="true" atNoPower="false" atStandby="true" mirX="0" mirY="0" x="0" y="0">
+							<r0 aid="toilet1F3light" flx="false" />
+							<r90 aid="toilet1F1light" flx="false" />
+							<r180 aid="toilet1B7light" flx="false" />
+							<r270 aid="toilet1B9light" flx="false" />
+						</additionaFullLit>
+						<features addFacilityIcons="false" inUseState="true" noPressureDmg="false" normalState="true" produceInNormal="false">
+  	<!-- SET RECYCLING RATE HERE -->
+							<toilet dumpsNeeded="25">
+								<gives>
+									<l _annotated_name="Water" consumeEvery="1" element="16" howMuch="1" />
+								</gives>
+							</toilet>
+							<noiseAndComfort onlyWhenInuse="false" reduceNegative="false">
+								<radiusBeauty radius="5" roomDrop="20" value="-20" />
+							</noiseAndComfort>
+						</features>
+					</element>
+				</l>
+				<l eid="4" gridOffX="0" gridOffY="1" layer="0" type="Object">
+					<element id="0" lightValue="High" renderOnFloor="false" userTogglable="false" walkGridCost="255">
+						<definedStates>
+							<l playAnimation="true" state="Standby">
+								<r0 aid="toilet2F3" flx="false" />
+								<r90 aid="toilet2F1" flx="false" />
+								<r180 aid="toilet2B7" flx="false" />
+								<r270 aid="toilet2B9" flx="false" />
+							</l>
+						</definedStates>
+						<additionaFullLit atInuse="true" atNoPower="false" atStandby="true" mirX="0" mirY="0" x="0" y="0">
+							<r0 aid="toilet2F3light" flx="false" />
+							<r90 aid="toilet2F1light" flx="false" />
+							<r180 aid="toilet2B7light" flx="false" />
+							<r270 aid="toilet2B9light" flx="false" />
+						</additionaFullLit>
+						<features addFacilityIcons="false" inUseState="true" noPressureDmg="false" normalState="true" produceInNormal="false">
+							<stateWatchdog autoproduce="false" />
+						</features>
+						<boxHatch boxX="18" boxY="4" flipR90="true" in="true" out="true" x="18" y="4">
+							<activate activateOffX="0" activateOffY="-1" />
+							<r90Pos boxX="-10" boxY="1" x="-10" y="1" />
+							<customHatch aid="boxhatch" />
+						</boxHatch>
+						<commonPower />
+					</element>
+				</l>
+			</data>
+			<linked>
+				<l damageGroup="0" eid="6" gridOffX="0" gridOffY="1" id="902" layer="0" rot="R0" />
+				<l damageGroup="0" eid="7" gridOffX="0" gridOffY="0" id="1093" layer="0" rot="R0" />
+			</linked>
+			<events />
+			<objectInfo buildInstant="false" debugOnly="false" disableAirlockTest="false" disableBuildTest="false" disableRotation="false" placeInMenu="1" systemPoints="0" viewMode="Normal">
+				<cu>
+					<groups>
+						<l buildTools="0" rep="875">
+							<customPrice>
+								<l _annotated_name="Infrablock" elementId="162" howMuch="2" />
+								<l _annotated_name="Electronics Component" elementId="173" howMuch="1" />
+							</customPrice>
+						</l>
+						<l buildTools="20" rep="949">
+							<customPrice>
+								<l _annotated_name="Infrablock" elementId="162" howMuch="2" />
+								<l _annotated_name="Soft block" elementId="1921" howMuch="1" />
+							</customPrice>
+						</l>
+					</groups>
+				</cu>
+				<name tid="134" />
+				<desc tid="135" />
+				<guiIcon aid="build_icon_123" />
+				<subCat id="1507" />
+				<restrictions>
+					<l gridX="1" gridY="0" sizeX="1" sizeY="1" type="Floor" />
+				</restrictions>
+				<difficultyLevel level="2" skill="Construction" />
+			</objectInfo>
+		</me>
+  </Element>
+</data>

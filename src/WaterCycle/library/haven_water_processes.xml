@@ -1,0 +1,128 @@
+<data>
+	<Product>
+	<!-- Changed the ratio from "0.2 ice => 1 water" to "1 ice => 1 water"
+	The amount of water into the system is thus divided by 5 unless we also raise the amount of ice in asteroids. 
+	We can also fix that by dividing the water requirement from O2 and food. 
+	
+	I slowed the job in the water purifier so the conversion is a bit more energy intensive. It doesn't need crew interaction anymore
+	-->
+	<product _name="Ice to Water" eid="41" interactive="false" itemScrapper="false" processValue="100" scrapper="false" smelter="true" startOnly="false" type="Process">
+		<needs>
+			<l _name="Ice" consumeEvery="1" element="40" howMuch="1" />
+		</needs>
+		<products>
+			<l _name="Water" element="16" howMuch="1" produceEvery="1" />
+		</products>
+		<!-- no need for skills as it is autonomous
+		<difficulty level="1" skill="Industry" />
+		-->
+		<desc />
+	</product>
+	<!-- So there's an indirection there, this process just points to the previeous one ? 
+	removing the interactive here so the process can run on its own 
+	-->
+	<product eid="2012" interactive="false" itemScrapper="false" processValue="100" scrapper="false" smelter="true" startOnly="false" type="Process">
+		<needs />
+		<products />
+		<list>
+			<processes>
+				<l _annotation="Ice to Water" process="41" />
+			</processes>
+		</list>
+		<desc />
+	</product>
+
+	<!-- consumeEvery from 500 to 2500 to compensate for water production reduction -->
+		<product _annotated_process="Water to Oxygen" eid="62" interactive="false" itemScrapper="false" processValue="100" scrapper="false" smelter="false" startOnly="false" type="Process">
+			<needs>
+				<l _annotated_name="Water" consumeEvery="2500" element="16" howMuch="1" />
+			</needs>
+			<products>
+				<l _annotated_name="Oxygen" element="63" howMuch="60" produceEvery="1" />
+			</products>
+			<desc />
+		</product>
+		
+	<!-- .3 water .3 chemical .3 fruits to 1 IV fluid -->
+	<!-- not necessary IV isn't a big logistics hog  -->
+
+	</Product>
+	
+  <Element>
+	<me _annotation="Water Purifier" alternateY="false" costGroup="875" ec="3" mid="2010" nonSymmetrical="false" offsetRot="R0">
+		<data>
+			<l eid="1" gridOffX="0" gridOffY="0" layer="0" type="Object">
+				<element id="0" lightValue="Medium" renderOnFloor="false" userTogglable="false" walkGridCost="255">
+					<definedStates>
+						<l playAnimation="false" state="Standby">
+							<r0 aid="waterPurifier1FH" flx="false" />
+							<r90 aid="null" flx="false" />
+							<r180 aid="waterPurifier1B" flx="false" />
+							<r270 aid="null" flx="false" />
+							<tasks>
+								<l dir="D7" gridOffX="0" gridOffY="-1" setStateInUse="true" task="StandWork" usage="Both">
+									<r0offset charOffX="-2" charOffY="1" />
+									<r180offset charOffX="-2" charOffY="-1" />
+								</l>
+							</tasks>
+						</l>
+						<l playAnimation="true" state="InUse">
+							<r0 aid="waterPurifier1FH" flx="false" />
+							<r90 aid="null" flx="false" />
+							<r180 aid="waterPurifier1B" flx="false" />
+							<r270 aid="null" flx="false" />
+						</l>
+					</definedStates>
+					<additionaFullLit atInuse="true" atNoPower="false" atStandby="true" mirX="0" mirY="0" x="0" y="0">
+						<r0 aid="waterPurifier1FHLights" flx="false" />
+						<r90 aid="null" flx="false" />
+						<r180 aid="null" flx="false" />
+						<r270 aid="null" flx="false" />
+					</additionaFullLit>
+					<features addFacilityIcons="true" inUseState="true" noPressureDmg="false" normalState="true" produceInNormal="true">
+						<produces>
+							<!-- MODIFIED valuePerSec to make it much slower. Reduced power per sec a bit but total power use is significantly higher 
+							reduced heat output as the heat is absorbed by the water ...
+							-->
+							<l product="2012" suction="false" usePowerPerSec="10.0" valuePerSec="2">
+								<heat temp="Low" type="HeatTo" />
+							</l>
+						</produces>
+						<!-- not sure it's needed but hey -->
+						<stateWatchdog autoproduce="true" />
+					</features>
+					<boxHatch boxX="20" boxY="2" flipR90="false" in="true" out="false" x="20" y="2">
+						<activate activateOffX="0" activateOffY="-1" />
+					</boxHatch>
+					<commonPower />
+				</element>
+			</l>
+		</data>
+		<linked>
+			<l damageGroup="0" eid="2" gridOffX="1" gridOffY="0" id="2014" layer="0" rot="R0" />
+			<l damageGroup="0" eid="3" gridOffX="0" gridOffY="0" id="2450" layer="0" rot="R90" />
+		</linked>
+		<events />
+		<objectInfo buildInstant="false" debugOnly="false" disableAirlockTest="false" disableBuildTest="false" disableRotation="false" placeInMenu="2" systemPoints="0" viewMode="Normal">
+			<cu>
+				<groups>
+					<l buildTools="10" rep="875">
+						<customPrice>
+							<l _annotation="Infrablock" elementId="162" howMuch="1" />
+							<l _annotation="Techblock" elementId="930" howMuch="1" />
+						</customPrice>
+					</l>
+				</groups>
+			</cu>
+			<name tid="1835" />
+			<desc tid="1836" />
+			<guiIcon aid="build_icon_2010" />
+			<subCat id="1510" />
+			<restrictions>
+				<l gridX="0" gridY="-1" sizeX="2" sizeY="1" type="Floor" />
+			</restrictions>
+			<difficultyLevel level="1" skill="Construction" />
+		</objectInfo>
+	</me>
+  </Element>
+</data>

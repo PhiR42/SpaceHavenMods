@@ -1,0 +1,69 @@
+<!-- Farming update, divided water consumption by 5 
+	Normalized output, we produce one unit twice as fast as 2 before
+
+	FIXME make it even faster to make smaller grow beds useful ?
+-->
+<data>
+	<Product>
+	<product _annotated_name="Root vegetables" eid="17" type="Crop">
+		<name tid="61" />
+		<GUIAnimation aid="rootVeggiesFoodIcon1" />
+		<stages>
+			<l co2PerMinute="3" lightNeeded="Medium" maxTemp="303" minTemp="278" oxygenPerMinute="5" stage="1" time="1300">
+				<needs>
+					<l _annotated_name="Water" consumeEvery="10" element="16" howMuch="1" />
+				</needs>
+				<anims>
+					<l dir="D1" type="Single" useFlipped="true">
+						<animation aid="potato1" />
+					</l>
+				</anims>
+			</l>
+			<l co2PerMinute="3" lightNeeded="Medium" maxTemp="303" minTemp="278" oxygenPerMinute="5" stage="2" time="1300">
+				<tend penalty="-50" />
+				<anims>
+					<l dir="D1" type="Single" useFlipped="true">
+						<animation aid="potato2" />
+					</l>
+				</anims>
+			</l>
+			<l co2PerMinute="3" lightNeeded="Medium" maxTemp="303" minTemp="278" oxygenPerMinute="5" stage="3" time="1300">
+				<needs>
+					<l _annotated_name="Water" consumeEvery="10" element="16" howMuch="1" />
+				</needs>
+				<anims>
+					<l dir="D1" type="Single" useFlipped="true">
+						<animation aid="potato3" />
+					</l>
+				</anims>
+			</l>
+			<l co2PerMinute="3" lightNeeded="Medium" maxTemp="303" minTemp="278" oxygenPerMinute="5" stage="4" time="1300">
+				<tend penalty="-50" />
+				<anims>
+					<l dir="D1" type="Single" useFlipped="true">
+						<animation aid="potato4" />
+					</l>
+				</anims>
+			</l>
+			<l co2PerMinute="3" lightNeeded="Medium" maxTemp="303" minTemp="278" oxygenPerMinute="5" stage="5" time="1">
+				<harvestable>
+					<products>
+						<l element="15" howMuch="2" produceEvery="1" />
+						<l element="71" howMuch="0" produceEvery="1" />
+					</products>
+				</harvestable>
+				<anims>
+					<l dir="D1" type="Single" useFlipped="true">
+						<animation aid="potato5" />
+					</l>
+				</anims>
+			</l>
+		</stages>
+		<plantingPenalty penalty="-50" />
+		<difficulty level="1" skill="Farming" />
+		<desc tid="62" />
+	</product>
+	</Product>
+	<Element>
+    </Element>
+</data>

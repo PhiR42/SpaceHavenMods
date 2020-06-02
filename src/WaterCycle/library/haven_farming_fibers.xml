@@ -1,0 +1,66 @@
+<!-- Farming update, divided water consumption by 5 and then again 
+	Temps are now very different from crops so it'll be harder to split a bed between crops. 
+-->
+<data>
+	<Product>
+	<product _annotated_name="Fibers" eid="1944" type="Crop">
+		<name tid="1786" />
+		<GUIAnimation aid="fiberIcon1" />
+		<stages>
+			<l co2PerMinute="3" lightNeeded="Medium" maxTemp="303" minTemp="283" oxygenPerMinute="10" stage="1" time="1300">
+				<needs>
+					<l _annotated_name="Water" consumeEvery="10" element="16" howMuch="1" />
+				</needs>
+				<anims>
+					<l dir="D1" type="Single" useFlipped="true">
+						<animation aid="potato1" />
+					</l>
+				</anims>
+			</l>
+			<l co2PerMinute="3" lightNeeded="Medium" maxTemp="303" minTemp="283" oxygenPerMinute="10" stage="2" time="1300">
+				<tend penalty="-50" />
+				<anims>
+					<l dir="D1" type="Single" useFlipped="true">
+						<animation aid="potato2" />
+					</l>
+				</anims>
+			</l>
+			<l co2PerMinute="3" lightNeeded="Medium" maxTemp="303" minTemp="283" oxygenPerMinute="10" stage="3" time="1300">
+				<needs>
+					<l _annotated_name="Water" consumeEvery="10" element="16" howMuch="1" />
+				</needs>
+				<anims>
+					<l dir="D1" type="Single" useFlipped="true">
+						<animation aid="potato3" />
+					</l>
+				</anims>
+			</l>
+			<l co2PerMinute="3" lightNeeded="Medium" maxTemp="303" minTemp="283" oxygenPerMinute="10" stage="4" time="1300">
+				<tend penalty="-50" />
+				<anims>
+					<l dir="D1" type="Single" useFlipped="true">
+						<animation aid="potato4" />
+					</l>
+				</anims>
+			</l>
+			<l co2PerMinute="3" lightNeeded="Medium" maxTemp="313" minTemp="273" oxygenPerMinute="10" stage="5" time="1">
+				<harvestable>
+					<products>
+						<l element="1932" howMuch="1" produceEvery="1" />
+					</products>
+				</harvestable>
+				<anims>
+					<l dir="D1" type="Single" useFlipped="true">
+						<animation aid="potato5" />
+					</l>
+				</anims>
+			</l>
+		</stages>
+		<plantingPenalty penalty="-50" />
+		<difficulty level="1" skill="Farming" />
+		<desc tid="1785" />
+	</product>
+	</Product>
+	<Element>
+    </Element>
+</data>
