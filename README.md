@@ -3,17 +3,16 @@ Some Space Haven mods I made
 
 ## Better Toilets
 Adds two new toilet models:
-  	- X0 Toilet one block basic toilet with no recycling at all
-  	- X2 Toilet with better water recycling capability
-  
+- X0 Toilet one block basic toilet with no recycling at all
+- X2 Toilet with better water recycling capability  
   This should also serve as an tutorial for modders as it both modifies existing textures and add new ones. XML files are heavily commented with explainations. 
   
 ## Gun Balance
-Updates the guns for more realistic balance
-  	Pistol should be generally weak, but still decent until medium range
-  	Shotgun devastating at short ranges but mediocre further
-  	SMG balanced
-  	Assault Rifle good at all distances, but dominating at long distances by reliably landing shots. At short distances, SMGs and shotguns will do more damage during the first exchange of fire. 
+Updates the guns for more realistic balance:
+- Pistol should be generally weak, but still decent until medium range
+- Shotgun devastating at short ranges but mediocre further
+- SMG balanced
+- Assault Rifle good at all distances, but dominating at long distances by reliably landing shots. At short distances, SMGs and shotguns will do more damage during the first exchange of fire. 
     
 ## Water Cycle
 Changes the water processing to relieve logistics
