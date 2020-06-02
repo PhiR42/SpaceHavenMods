@@ -9,11 +9,15 @@
   - trading prices should correlate with the rarity/usefulness of an item
   
   Regarding energy rods, those are now 5 times less abundant, but the power generators have been updated to reflect that, they'll consume rods 5 times slower (less logistics).
+  </description>
+  <knownIssues>
   FIXME The same should be done for water!
   FIXME add spent energy rods ands recycling via the cell fuser
   
   FIXME fix trade values ? 
-  </description>
+  </knownIssues>
+  <website>https://github.com/PhiR42/SpaceHavenMods</website>
+  <updates>https://github.com/PhiR42/SpaceHavenMods/raw/master/IndustryCycle-latest.zip</updates>
   <modVersion>0.1</modVersion>
   <author>PhiR</author>
   <minimumLoaderVersion>0.0.5</minimumLoaderVersion>
