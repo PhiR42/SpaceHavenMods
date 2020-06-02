@@ -1,0 +1,640 @@
+<data>
+	<Product>
+	<!-- Ratio of 5 rod per cristal lowered to 1 rod per cristal, so we multiplied the consumeEvery by 5 from 500 to 2500.
+The upside is that there is less logistics as rods need to be replaced 5 times less often -->
+		<product _name="Energy rod to Power (small)" eid="35" interactive="false" itemScrapper="false" processValue="100" scrapper="false" smelter="false" startOnly="false" type="Process">
+			<needs>
+				<l _name="Energy rod" consumeEvery="2500" element="174" howMuch="1" />
+			</needs>
+			<products>
+				<l _name="Power" element="34" howMuch="15" produceEvery="1" />
+			</products>
+			<desc />
+		</product>
+	<!-- 1 steel + .2 electronic for an infra block -->
+		<product _name="Steel Plates Electronics Component to Infrablock" eid="183" interactive="true" itemScrapper="false" processValue="100" scrapper="false" smelter="false" startOnly="false" type="Process">
+			<needs>
+				<l _name="Steel Plates" consumeEvery="1" element="1922" howMuch="1" />
+				<l _name="Electronics Component" consumeEvery="5" element="173" howMuch="1" />
+			</needs>
+			<products>
+				<l _name="Infrablock" element="162" howMuch="1" produceEvery="1" />
+			</products>
+			<difficulty level="3" skill="Industry" />
+			<desc />
+		</product>
+	<!-- 1 crystal to 1 rod, simple repackaging. This reduces the number of rods by 5, so power generators are updated accordingly -->
+		<product _name="Energium to Energy rod" eid="964" interactive="true" itemScrapper="false" processValue="100" scrapper="false" smelter="false" startOnly="false" type="Process">
+			<needs>
+				<l _name="Energium" consumeEvery="1" element="158" howMuch="1" />
+			</needs>
+			<products>
+				<l _name="Energy rod" element="174" howMuch="1" produceEvery="1" />
+			</products>
+			<difficulty level="3" skill="Industry" />
+			<desc />
+		</product>
+	<!-- 1 crystal to 1 fuel, simple repackaging. This doubles the amount of hyperfuel so some adjustement will have to be made FIXME -->
+		<product _name="Hyperium to Hyperfuel" eid="965" interactive="true" itemScrapper="false" processValue="100" scrapper="false" smelter="false" startOnly="false" type="Process">
+			<needs>
+				<l _name="Hyperium" consumeEvery="1" element="172" howMuch="1" />
+			</needs>
+			<products>
+				<l _name="Hyperfuel" element="178" howMuch="1" produceEvery="1" />
+			</products>
+			<difficulty level="3" skill="Industry" />
+			<desc />
+		</product>
+	<!-- 1 noble + .5 base for 1 electronic that means less electronic in the system but that's ok -->
+		<product _name="Noble Metals Base Metals to Electronics Component" eid="966" interactive="true" itemScrapper="false" processValue="100" scrapper="false" smelter="false" startOnly="false" type="Process">
+			<needs>
+				<l _name="Noble Metals" consumeEvery="1" element="169" howMuch="1" />
+				<l _name="Base Metals" consumeEvery="2" element="157" howMuch="1" />
+			</needs>
+			<products>
+				<l _name="Electronics Component" element="173" howMuch="1" produceEvery="1" />
+			</products>
+			<difficulty level="3" skill="Industry" />
+			<desc />
+		</product>
+	<!-- this should be updated but maybe in another mod ?
+	1 power every 5 seconds is really weird and makes the UI behave strangely (it looks intermittent)
+	 -->
+		<product _name="Solar to Power FIXME NOT SURE" eid="1443" interactive="false" itemScrapper="false" processValue="100" scrapper="false" smelter="false" startOnly="false" type="Process">
+			<needs />
+			<products>
+				<l _name="Power" element="34" howMuch="1" produceEvery="5" />
+			</products>
+			<desc />
+		</product>
+	<!-- 2 steel to 1 block now, to make expanding the ship more costly -->
+		<product _name="Steel Plates to Hull Block" eid="1760" interactive="true" itemScrapper="false" processValue="100" scrapper="false" smelter="false" startOnly="false" type="Process">
+			<needs>
+				<l _name="Steel Plates" consumeEvery="1" element="1922" howMuch="2" />
+			</needs>
+			<products>
+				<l _name="Hull Block" element="1759" howMuch="1" produceEvery="1" />
+			</products>
+			<difficulty level="3" skill="Industry" />
+			<desc />
+		</product>
+	<!-- 2 scraps to 1 soft block -->
+		<product _name="Soft Scrap to Soft block" eid="1876" interactive="true" itemScrapper="false" processValue="100" scrapper="false" smelter="false" startOnly="false" type="Process">
+			<needs>
+				<l _name="Soft Scrap" consumeEvery="1" element="1874" howMuch="1" />
+			</needs>
+			<products>
+				<l _name="Soft block" element="1921" howMuch="1" produceEvery="2" />
+			</products>
+			<difficulty level="1" skill="Industry" />
+			<desc />
+		</product>
+	<!-- 2 scraps to 1 infra block -->
+		<product _name="Infra Scrap to Infrablock" eid="1877" interactive="true" itemScrapper="false" processValue="100" scrapper="false" smelter="false" startOnly="false" type="Process">
+			<needs>
+				<l _name="Infra Scrap" consumeEvery="1" element="1873" howMuch="1" />
+			</needs>
+			<products>
+				<l _name="Infrablock" element="162" howMuch="1" produceEvery="2" />
+			</products>
+			<difficulty level="1" skill="Industry" />
+			<desc />
+		</product>
+	<!-- medium gen, consumeEvery from 500 to 2500 to compensate from 5 to 1 rod reduction. TODO: adjust power output -->
+		<product _name="Energy rod to Power" eid="1883" interactive="false" itemScrapper="false" processValue="100" scrapper="false" smelter="false" startOnly="false" type="Process">
+			<needs>
+				<l _name="Energy rod" consumeEvery="2500" element="174" howMuch="1" />
+			</needs>
+			<products>
+				<l _name="Power" element="34" howMuch="25" produceEvery="1" />
+			</products>
+			<desc />
+		</product>
+	<!-- big gen, consumeEvery from 500 to 2500 to compensate from 5 to 1 rod reduction. TODO: adjust power output -->
+		<product _name="Energy rod to Power" eid="1884" interactive="false" itemScrapper="false" processValue="100" scrapper="false" smelter="false" startOnly="false" type="Process">
+			<needs>
+				<l _name="Energy rod" consumeEvery="2500" element="174" howMuch="1" />
+			</needs>
+			<products>
+				<l _name="Power" element="34" howMuch="40" produceEvery="1" />
+			</products>
+			<desc />
+		</product>
+	<!-- 5 scraps to 1 hull block -->
+		<product _name="Hull Scrap to Hull Block" eid="1887" interactive="true" itemScrapper="false" processValue="100" scrapper="false" smelter="false" startOnly="false" type="Process">
+			<needs>
+				<l _name="Hull Scrap" consumeEvery="1" element="1886" howMuch="1" />
+			</needs>
+			<products>
+				<l _name="Hull Block" element="1759" howMuch="1" produceEvery="5" />
+			</products>
+			<difficulty level="1" skill="Industry" />
+			<desc />
+		</product>
+	<!-- 1 frabic .2 steel to 1 soft block -->
+		<product _name="Steel Plates Fabrics to Soft block" eid="1927" interactive="true" itemScrapper="false" processValue="100" scrapper="false" smelter="false" startOnly="false" type="Process">
+			<needs>
+				<l _name="Fabrics" consumeEvery="1" element="177" howMuch="1" />
+				<l _name="Steel Plates" consumeEvery="5" element="1922" howMuch="1" />
+			</needs>
+			<products>
+				<l _name="Soft block" element="1921" howMuch="1" produceEvery="1" />
+			</products>
+			<difficulty level="1" skill="Industry" />
+			<desc />
+		</product>
+	<!-- This one is tricky. Currently 0.5 electronic + 0.5 rod to 1 cell to keep them affordable. Maybe make them more expensive but more efficient in turrets/other. 
+	I also want to make the cryopods use cells instead of rods (which are used by the reactors). 
+	TODO maybe make the used cells recyclable/reloadable to offset the cost ?
+	 -->
+		<product _name="Energy rod Electronics Component to Energy Cell" eid="1930" interactive="true" itemScrapper="false" processValue="100" scrapper="false" smelter="false" startOnly="false" type="Process">
+			<needs>
+				<l _name="Electronics Component" consumeEvery="2" element="173" howMuch="1" />
+				<l _name="Energy rod" consumeEvery="2" element="174" howMuch="1" />
+			</needs>
+			<products>
+				<l _name="Energy Cell" element="1926" howMuch="1" produceEvery="1" />
+			</products>
+			<difficulty level="3" skill="Industry" />
+			<desc />
+		</product>
+	<!-- 1 base metal 0.2 carbon to 1 steel -->
+		<product _name="Carbon Base Metals to Steel Plates" eid="1931" interactive="true" itemScrapper="false" processValue="100" scrapper="false" smelter="false" startOnly="false" type="Process">
+			<needs>
+				<l _name="Base Metals" consumeEvery="2" element="157" howMuch="1" />
+				<l _name="Carbon" consumeEvery="10" element="170" howMuch="1" />
+			</needs>
+			<products>
+				<l _name="Steel Plates" element="1922" howMuch="1" produceEvery="2" />
+			</products>
+			<difficulty level="1" skill="Industry" />
+			<desc />
+		</product>
+	<!-- 1 fiber to 1 fabric -->
+		<product _name="Fibers to Fabrics" eid="1935" interactive="true" itemScrapper="false" processValue="100" scrapper="false" smelter="false" startOnly="false" type="Process">
+			<needs>
+				<l _name="Fibers" consumeEvery="1" element="1932" howMuch="1" />
+			</needs>
+			<products>
+				<l _name="Fabrics" element="177" howMuch="1" produceEvery="1" />
+			</products>
+			<difficulty level="1" skill="Industry" />
+			<desc />
+		</product>
+	<!-- 1 electronic 1 chemincal to 1 optronics -->
+		<product _name="Electronics Component Chemicals to Optronics Component" eid="1942" interactive="true" itemScrapper="false" processValue="100" scrapper="false" smelter="false" startOnly="false" type="Process">
+			<needs>
+				<l _name="Electronics Component" consumeEvery="1" element="173" howMuch="1" />
+				<l _name="Chemicals" consumeEvery="1" element="176" howMuch="1" />
+			</needs>
+			<products>
+				<l _name="Optronics Component" element="1924" howMuch="1" produceEvery="1" />
+			</products>
+			<difficulty level="3" skill="Industry" />
+			<desc />
+		</product>
+	<!-- .1 scrap to 1 optronics. I changed the output from rod because that was 2 steps back in the production chain -->
+		<product _name="Energy Scrap to Infrablock Energy cell" eid="1948" interactive="true" itemScrapper="false" processValue="100" scrapper="false" smelter="false" startOnly="false" type="Process">
+			<needs>
+				<l _name="Energy Scrap" consumeEvery="1" element="1947" howMuch="1" />
+			</needs>
+			<products>
+				<l _name="Energy cell" element="1926" howMuch="1" produceEvery="10" />
+			</products>
+			<difficulty level="1" skill="Industry" />
+			<desc />
+		</product>
+	<!-- .1 scrap to 1 optronics. I changed the output from electronic because that was 2 steps back in the production chain -->
+		<product _name="Tech Scrap to Infrablock Optronics Component" eid="1949" interactive="true" itemScrapper="false" processValue="100" scrapper="false" smelter="false" startOnly="false" type="Process">
+			<needs>
+				<l _name="Tech Scrap" consumeEvery="1" element="1946" howMuch="1" />
+			</needs>
+			<products>
+				<l _name="Optronics Component" element="1924" howMuch="1" produceEvery="10" />
+			</products>
+			<difficulty level="1" skill="Industry" />
+			<desc />
+		</product>		
+	<!-- 1 raw chemical to 1 cheminals -->
+		<product _name="Raw Chemicals to Chemicals" eid="2011" interactive="true" itemScrapper="false" processValue="100" scrapper="false" smelter="false" startOnly="false" type="Process">
+			<needs>
+				<l _name="Raw Chemicals" consumeEvery="1" element="171" howMuch="1" />
+			</needs>
+			<products>
+				<l _name="Chemicals" element="176" howMuch="1" produceEvery="1" />
+			</products>
+			<difficulty level="3" skill="Industry" />
+			<desc />
+		</product>
+	<!-- 1 chemical .5 fabric .3 plastics to 1 medical -->
+		<product _name="Chemicals Fabrics Plastics to Medical Supplies" eid="2054" interactive="true" itemScrapper="false" processValue="100" scrapper="false" smelter="false" startOnly="false" type="Process">
+			<needs>
+				<l _name="Chemicals" consumeEvery="1" element="176" howMuch="1" />
+				<l _name="Fabrics" consumeEvery="2" element="177" howMuch="1" />
+				<l _name="Plastics" consumeEvery="3" element="175" howMuch="1" />
+			</needs>
+			<products>
+				<l _name="Medical Supplies" element="2053" howMuch="1" produceEvery="1" />
+			</products>
+			<difficulty level="3" skill="Industry" />
+			<desc />
+		</product>
+	<!-- .3 water .3 chemical .3 fruits to 1 IV fluid -->
+		<product _name="Chemicals Water Fruits to IV Fluid" eid="2059" interactive="true" itemScrapper="false" processValue="100" scrapper="false" smelter="false" startOnly="false" type="Process">
+			<needs>
+				<l _name="Water" consumeEvery="3" element="16" howMuch="1" />
+				<l _name="Chemicals" consumeEvery="3" element="176" howMuch="1" />
+				<l _name="Fruits" consumeEvery="3" element="706" howMuch="1" />
+			</needs>
+			<products>
+				<l _name="IV Fluid" element="2058" howMuch="1" produceEvery="1" />
+			</products>
+			<difficulty level="3" skill="Industry" />
+			<desc />
+		</product>
+	<!-- 1 carbon .5 chemical to 1 plastics -->
+		<product _name="Carbon Chemicals to Plastics" eid="2416" interactive="true" itemScrapper="false" processValue="100" scrapper="false" smelter="false" startOnly="false" type="Process">
+			<needs>
+				<l _name="Carbon" consumeEvery="1" element="170" howMuch="1" />
+				<l _name="Chemicals" consumeEvery="2" element="176" howMuch="1" />
+			</needs>
+			<products>
+				<l _name="Plastics" element="175" howMuch="1" produceEvery="1" />
+			</products>
+			<difficulty level="3" skill="Industry" />
+			<desc />
+		</product>
+
+
+	<!-- Changed the ratio from "0.2 ice => 1 water" to ".5 ice => .5 water" so the conversion is a bit more energy intensive 
+	The amount of water into the system is thus divided by 5 unless we also raise the amount of ice in asteroids. 
+	We can also fix that by dividing the water requirement from O2 and food. 
+	FIXME need to fix the toilet as well...
+	-->
+		<product _name="Ice to Water" eid="41" interactive="true" itemScrapper="false" processValue="100" scrapper="false" smelter="false" startOnly="false" type="Process">
+			<needs>
+				<l _name="Ice" consumeEvery="2" element="40" howMuch="1" />
+			</needs>
+			<products>
+				<l _name="Water" element="16" howMuch="2" produceEvery="1" />
+			</products>
+			<difficulty level="1" skill="Industry" />
+			<desc />
+		</product>
+	<!-- consumeEvery from 500 to 2500 to compensate for water production reduction -->
+		<product _annotated_process="Water to Oxygen" eid="62" interactive="false" itemScrapper="false" processValue="100" scrapper="false" smelter="false" startOnly="false" type="Process">
+			<needs>
+				<l _annotated_name="Water" consumeEvery="2500" element="16" howMuch="1" />
+			</needs>
+			<products>
+				<l _annotated_name="Oxygen" element="63" howMuch="60" produceEvery="1" />
+			</products>
+			<desc />
+		</product>
+	<!-- Farming update, divided water consumption by 5 and then again 
+	Temps are now very different from crops so it'll be harder to split a bed between crops. 
+	Meat now requires chemicals
+-->
+		<product _annotated_name="Root vegetables" eid="17" type="Crop">
+			<name tid="61" />
+			<GUIAnimation aid="rootVeggiesFoodIcon1" />
+			<stages>
+				<l co2PerMinute="3" lightNeeded="Medium" maxTemp="303" minTemp="278" oxygenPerMinute="5" stage="1" time="1000">
+					<needs>
+						<l _annotated_name="Water" consumeEvery="10" element="16" howMuch="1" />
+					</needs>
+					<anims>
+						<l dir="D1" type="Single" useFlipped="true">
+							<animation aid="potato1" />
+						</l>
+					</anims>
+				</l>
+				<l co2PerMinute="3" lightNeeded="Medium" maxTemp="303" minTemp="278" oxygenPerMinute="5" stage="2" time="1000">
+					<tend penalty="-50" />
+					<anims>
+						<l dir="D1" type="Single" useFlipped="true">
+							<animation aid="potato2" />
+						</l>
+					</anims>
+				</l>
+				<l co2PerMinute="3" lightNeeded="Medium" maxTemp="303" minTemp="278" oxygenPerMinute="5" stage="3" time="1000">
+					<needs>
+						<l _annotated_name="Water" consumeEvery="10" element="16" howMuch="1" />
+					</needs>
+					<anims>
+						<l dir="D1" type="Single" useFlipped="true">
+							<animation aid="potato3" />
+						</l>
+					</anims>
+				</l>
+				<l co2PerMinute="3" lightNeeded="Medium" maxTemp="303" minTemp="278" oxygenPerMinute="5" stage="4" time="1000">
+					<tend penalty="-50" />
+					<anims>
+						<l dir="D1" type="Single" useFlipped="true">
+							<animation aid="potato4" />
+						</l>
+					</anims>
+				</l>
+				<l co2PerMinute="3" lightNeeded="Medium" maxTemp="303" minTemp="278" oxygenPerMinute="5" stage="5" time="1">
+					<harvestable>
+						<products>
+							<l element="15" howMuch="2" produceEvery="1" />
+							<l element="71" howMuch="0" produceEvery="1" />
+						</products>
+					</harvestable>
+					<anims>
+						<l dir="D1" type="Single" useFlipped="true">
+							<animation aid="potato5" />
+						</l>
+					</anims>
+				</l>
+			</stages>
+			<plantingPenalty penalty="-50" />
+			<difficulty level="1" skill="Farming" />
+			<desc tid="62" />
+		</product>
+		<product _annotated_name="Fruits" eid="704" type="Crop">
+			<name tid="422" />
+			<GUIAnimation aid="fruitFrood1" />
+			<stages>
+				<l co2PerMinute="3" lightNeeded="Medium" maxTemp="303" minTemp="288" oxygenPerMinute="10" stage="1" time="1000">
+					<needs>
+						<l _annotated_name="Water" consumeEvery="20" element="16" howMuch="1" />
+					</needs>
+					<anims>
+						<l dir="D1" type="Single" useFlipped="true">
+							<animation aid="potato1" />
+						</l>
+					</anims>
+				</l>
+				<l co2PerMinute="3" lightNeeded="Medium" maxTemp="303" minTemp="288" oxygenPerMinute="5" stage="2" time="1000">
+					<tend penalty="-50" />
+					<anims>
+						<l dir="D1" type="Single" useFlipped="true">
+							<animation aid="potato2" />
+						</l>
+					</anims>
+				</l>
+				<l co2PerMinute="3" lightNeeded="Medium" maxTemp="303" minTemp="288" oxygenPerMinute="5" stage="3" time="1000">
+					<needs>
+						<l _annotated_name="Water" consumeEvery="20" element="16" howMuch="1" />
+					</needs>
+					<anims>
+						<l dir="D1" type="Single" useFlipped="true">
+							<animation aid="potato3" />
+						</l>
+					</anims>
+				</l>
+				<l co2PerMinute="3" lightNeeded="Medium" maxTemp="303" minTemp="288" oxygenPerMinute="5" stage="4" time="1000">
+					<tend penalty="-50" />
+					<anims>
+						<l dir="D1" type="Single" useFlipped="true">
+							<animation aid="potato4" />
+						</l>
+					</anims>
+				</l>
+				<l co2PerMinute="3" lightNeeded="Medium" maxTemp="303" minTemp="288" oxygenPerMinute="5" stage="5" time="1">
+					<harvestable>
+						<products>
+							<l element="706" howMuch="1" produceEvery="1" />
+							<l element="71" howMuch="0" produceEvery="1" />
+						</products>
+					</harvestable>
+					<anims>
+						<l dir="D1" type="Single" useFlipped="true">
+							<animation aid="potato5" />
+						</l>
+					</anims>
+				</l>
+			</stages>
+			<plantingPenalty penalty="-75" />
+			<difficulty level="2" skill="Farming" />
+			<desc tid="424" />
+		</product>
+		
+	    <!-- Artificial Meat: 33 - 40C, needs more CO2 and chemicals as well as water -->
+		<product _annotated_name="Artificial meat" eid="705" type="Crop">
+			<name tid="423" />
+			<GUIAnimation aid="artificialMeatIcon" />
+			<stages>
+				<l co2PerMinute="12" lightNeeded="Medium" maxTemp="313" minTemp="306" oxygenPerMinute="0" stage="1" time="1000">
+					<needs>
+						<l _annotated_name="Water" consumeEvery="6" element="16" howMuch="1" />
+						<l _annotated_name="Chemicals" consumeEvery="6" element="176" howMuch="1" />
+					</needs>
+					<anims>
+						<l dir="D1" type="Single" useFlipped="true">
+							<animation aid="potato1" />
+						</l>
+					</anims>
+				</l>
+				<l co2PerMinute="12" lightNeeded="Medium" maxTemp="313" minTemp="306" oxygenPerMinute="0" stage="2" time="1000">
+					<tend penalty="-50" />
+					<anims>
+						<l dir="D1" type="Single" useFlipped="true">
+							<animation aid="potato2" />
+						</l>
+					</anims>
+				</l>
+				<l co2PerMinute="12" lightNeeded="Medium" maxTemp="313" minTemp="306" oxygenPerMinute="0" stage="3" time="1000">
+					<needs>
+						<l _annotated_name="Water" consumeEvery="6" element="16" howMuch="1" />
+						<l _annotated_name="Chemicals" consumeEvery="6" element="176" howMuch="1" />
+					</needs>
+					<anims>
+						<l dir="D1" type="Single" useFlipped="true">
+							<animation aid="potato3" />
+						</l>
+					</anims>
+				</l>
+				<l co2PerMinute="12" lightNeeded="Medium" maxTemp="313" minTemp="306" oxygenPerMinute="0" stage="4" time="1000">
+					<tend penalty="-50" />
+					<anims>
+						<l dir="D1" type="Single" useFlipped="true">
+							<animation aid="potato4" />
+						</l>
+					</anims>
+				</l>
+				<l co2PerMinute="12" lightNeeded="Medium" maxTemp="313" minTemp="306" oxygenPerMinute="0" stage="5" time="1">
+					<harvestable>
+						<products>
+							<l element="707" howMuch="1" produceEvery="1" />
+							<l element="71" howMuch="0" produceEvery="1" />
+						</products>
+					</harvestable>
+					<anims>
+						<l dir="D1" type="Single" useFlipped="true">
+							<animation aid="potato5" />
+						</l>
+					</anims>
+				</l>
+			</stages>
+			<plantingPenalty penalty="-75" />
+			<difficulty level="3" skill="Farming" />
+			<desc tid="425" />
+		</product>
+		<product _annotated_name="Fibers" eid="1944" type="Crop">
+			<name tid="1786" />
+			<GUIAnimation aid="fiberIcon1" />
+			<stages>
+				<l co2PerMinute="3" lightNeeded="Medium" maxTemp="303" minTemp="283" oxygenPerMinute="10" stage="1" time="1300">
+					<needs>
+						<l _annotated_name="Water" consumeEvery="10" element="16" howMuch="1" />
+					</needs>
+					<anims>
+						<l dir="D1" type="Single" useFlipped="true">
+							<animation aid="potato1" />
+						</l>
+					</anims>
+				</l>
+				<l co2PerMinute="3" lightNeeded="Medium" maxTemp="303" minTemp="283" oxygenPerMinute="10" stage="2" time="1300">
+					<tend penalty="-50" />
+					<anims>
+						<l dir="D1" type="Single" useFlipped="true">
+							<animation aid="potato2" />
+						</l>
+					</anims>
+				</l>
+				<l co2PerMinute="3" lightNeeded="Medium" maxTemp="303" minTemp="283" oxygenPerMinute="10" stage="3" time="1300">
+					<needs>
+						<l _annotated_name="Water" consumeEvery="10" element="16" howMuch="1" />
+					</needs>
+					<anims>
+						<l dir="D1" type="Single" useFlipped="true">
+							<animation aid="potato3" />
+						</l>
+					</anims>
+				</l>
+				<l co2PerMinute="3" lightNeeded="Medium" maxTemp="303" minTemp="283" oxygenPerMinute="10" stage="4" time="1300">
+					<tend penalty="-50" />
+					<anims>
+						<l dir="D1" type="Single" useFlipped="true">
+							<animation aid="potato4" />
+						</l>
+					</anims>
+				</l>
+				<l co2PerMinute="3" lightNeeded="Medium" maxTemp="313" minTemp="273" oxygenPerMinute="10" stage="5" time="1">
+					<harvestable>
+						<products>
+							<l element="1932" howMuch="1" produceEvery="1" />
+						</products>
+					</harvestable>
+					<anims>
+						<l dir="D1" type="Single" useFlipped="true">
+							<animation aid="potato5" />
+						</l>
+					</anims>
+				</l>
+			</stages>
+			<plantingPenalty penalty="-50" />
+			<difficulty level="1" skill="Farming" />
+			<desc tid="1785" />
+		</product>
+
+	</Product>
+  <Element>
+  	<!-- The only difference with stock toilet is the recycling rate -->
+		<me _element_name_0="X1 Toilet" alternateY="false" costGroup="949" ec="8" mid="123" nonSymmetrical="false" offsetRot="R0">
+			<data>
+				<l eid="1" gridOffX="1" gridOffY="1" layer="0" type="Object">
+					<element id="0" lightValue="Low" renderOnFloor="false" userTogglable="false" walkGridCost="255">
+						<definedStates>
+							<l playAnimation="false" state="Standby">
+								<r0 aid="toilet1F3" flx="false" />
+								<r90 aid="toilet1F1" flx="false" />
+								<r180 aid="toilet1B7" flx="false" />
+								<r270 aid="toilet1B9" flx="false" />
+								<tasks>
+									<l dir="D3" gridOffX="0" gridOffY="0" setStateInUse="false" task="Sit" usage="Both">
+										<activate activateOffX="0" activateOffY="-1" />
+										<r0offset charOffX="12" charOffY="-4" />
+										<r180offset charOffX="-10" charOffY="4" />
+										<r90offset charOffX="-5" charOffY="-8" />
+										<r180InFront x="0" y="0">
+											<front aid="toilet1bmask" />
+										</r180InFront>
+									</l>
+								</tasks>
+							</l>
+						</definedStates>
+						<additionaFullLit atInuse="true" atNoPower="false" atStandby="true" mirX="0" mirY="0" x="0" y="0">
+							<r0 aid="toilet1F3light" flx="false" />
+							<r90 aid="toilet1F1light" flx="false" />
+							<r180 aid="toilet1B7light" flx="false" />
+							<r270 aid="toilet1B9light" flx="false" />
+						</additionaFullLit>
+						<features addFacilityIcons="false" inUseState="true" noPressureDmg="false" normalState="true" produceInNormal="false">
+  	<!-- SET RECYCLING RATE HERE -->
+							<toilet dumpsNeeded="25">
+								<gives>
+									<l _annotated_name="Water" consumeEvery="1" element="16" howMuch="1" />
+								</gives>
+							</toilet>
+							<noiseAndComfort onlyWhenInuse="false" reduceNegative="false">
+								<radiusBeauty radius="5" roomDrop="20" value="-20" />
+							</noiseAndComfort>
+						</features>
+					</element>
+				</l>
+				<l eid="4" gridOffX="0" gridOffY="1" layer="0" type="Object">
+					<element id="0" lightValue="High" renderOnFloor="false" userTogglable="false" walkGridCost="255">
+						<definedStates>
+							<l playAnimation="true" state="Standby">
+								<r0 aid="toilet2F3" flx="false" />
+								<r90 aid="toilet2F1" flx="false" />
+								<r180 aid="toilet2B7" flx="false" />
+								<r270 aid="toilet2B9" flx="false" />
+							</l>
+						</definedStates>
+						<additionaFullLit atInuse="true" atNoPower="false" atStandby="true" mirX="0" mirY="0" x="0" y="0">
+							<r0 aid="toilet2F3light" flx="false" />
+							<r90 aid="toilet2F1light" flx="false" />
+							<r180 aid="toilet2B7light" flx="false" />
+							<r270 aid="toilet2B9light" flx="false" />
+						</additionaFullLit>
+						<features addFacilityIcons="false" inUseState="true" noPressureDmg="false" normalState="true" produceInNormal="false">
+							<stateWatchdog autoproduce="false" />
+						</features>
+						<boxHatch boxX="18" boxY="4" flipR90="true" in="true" out="true" x="18" y="4">
+							<activate activateOffX="0" activateOffY="-1" />
+							<r90Pos boxX="-10" boxY="1" x="-10" y="1" />
+							<customHatch aid="boxhatch" />
+						</boxHatch>
+						<commonPower />
+					</element>
+				</l>
+			</data>
+			<linked>
+				<l damageGroup="0" eid="6" gridOffX="0" gridOffY="1" id="902" layer="0" rot="R0" />
+				<l damageGroup="0" eid="7" gridOffX="0" gridOffY="0" id="1093" layer="0" rot="R0" />
+			</linked>
+			<events />
+			<objectInfo buildInstant="false" debugOnly="false" disableAirlockTest="false" disableBuildTest="false" disableRotation="false" placeInMenu="1" systemPoints="0" viewMode="Normal">
+				<cu>
+					<groups>
+						<l buildTools="0" rep="875">
+							<customPrice>
+								<l _annotated_name="Infrablock" elementId="162" howMuch="2" />
+								<l _annotated_name="Electronics Component" elementId="173" howMuch="1" />
+							</customPrice>
+						</l>
+						<l buildTools="20" rep="949">
+							<customPrice>
+								<l _annotated_name="Infrablock" elementId="162" howMuch="2" />
+								<l _annotated_name="Soft block" elementId="1921" howMuch="1" />
+							</customPrice>
+						</l>
+					</groups>
+				</cu>
+				<name tid="134" />
+				<desc tid="135" />
+				<guiIcon aid="build_icon_123" />
+				<subCat id="1507" />
+				<restrictions>
+					<l gridX="1" gridY="0" sizeX="1" sizeY="1" type="Floor" />
+				</restrictions>
+				<difficultyLevel level="2" skill="Construction" />
+			</objectInfo>
+		</me>
+  </Element>
+</data>
