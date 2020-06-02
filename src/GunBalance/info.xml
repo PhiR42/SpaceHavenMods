@@ -4,9 +4,9 @@
   	Pistol should be generally weak, but still decent until medium range
   	Shotgun devastating at short ranges but mediocre further
   	SMG balanced
-  	Assault Rifle good at all distances, but dominating at long distances by reliably landing shots. At short distances, SMGs and shotguns will do more damage during the 1 exchange of fire. 
+  	Assault Rifle good at all distances, but dominating at long distances by reliably landing shots. At short distances, SMGs and shotguns will do more damage during the 1st exchange of fire. 
   	
-  	KNOWN ISSUES: It seems each bullet hit (no matter how small) will trigger a surrender roll. I've made the shotgun shoot LESS pellets not more to account for this
+  	KNOWN ISSUES: It seems each bullet hit (no matter how small) will trigger a surrender roll. I've made the shotgun shoot LESS pellets instead more to account for this
   </description>
   <modVersion>0.2</modVersion>
   <author>PhiR</author>
