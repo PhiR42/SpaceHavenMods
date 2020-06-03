@@ -49,6 +49,7 @@
 	</Product>
 	
   <Element>
+  	<!-- water purifier is now autonomous -->
 	<me _annotation="Water Purifier" alternateY="false" costGroup="875" ec="3" mid="2010" nonSymmetrical="false" offsetRot="R0">
 		<data>
 			<l eid="1" gridOffX="0" gridOffY="0" layer="0" type="Object">

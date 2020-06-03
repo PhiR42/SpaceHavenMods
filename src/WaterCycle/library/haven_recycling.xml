@@ -1,0 +1,51 @@
+<data>
+	<Product>
+	
+	<product _annotation="Human meat to Water" eid="504201876" interactive="true" itemScrapper="false" processValue="100" scrapper="false" smelter="false" startOnly="false" type="Process">
+		<needs>
+			<l _annotation="Human meat" element="985" howMuch="1" produceEvery="1" />
+		</needs>
+		<products>
+			<l _annotation="Water" element="16" howMuch="1" produceEvery="5" />
+			<l _annotation="Carbon" element="170" howMuch="1" produceEvery="5" />
+		</products>
+		<difficulty level="1" skill="Industry" />
+		<desc />
+	</product>
+	<product _annotation="Monster meat to Water" eid="504201877" interactive="true" itemScrapper="false" processValue="100" scrapper="false" smelter="false" startOnly="false" type="Process">
+		<needs>
+			<l _annotation="Monster meat"  element="984" howMuch="1" produceEvery="1" />
+		</needs>
+		<products>
+			<l _annotation="Water" element="16" howMuch="1" produceEvery="5" />
+			<l _annotation="Chemicals" element="176" howMuch="1" produceEvery="5" />
+		</products>
+		<difficulty level="1" skill="Industry" />
+		<desc />
+	</product>
+
+	<!-- process list for the recycler 
+	In the future it'd make sense to have a bio recycler, and have it deal with bio waste (probably included in vanilla soon)
+	-->
+	<product eid="1879" interactive="true" itemScrapper="false" processValue="100" scrapper="true" smelter="false" startOnly="false" type="Process">
+		<needs />
+		<products />
+		<list>
+			<processes>
+				<l _annotation="Soft Scrap to Soft block" process="1876" />
+				<l _annotation="Infra Scrap to Infrablock" process="1877" />
+				<l _annotation="Hull Scrap to Hull Block" process="1887" />
+				<l _annotation="Energy Scrap to Infrablock Energy rod" process="1948" />
+				<l _annotation="Tech Scrap to Infrablock Electronics Component" process="1949" />
+				<l _annotation="Human meat to Water" process="504201876" />
+				<l _annotation="Monster meat to Water" process="504201877" />
+			</processes>
+		</list>
+		<desc />
+	</product>
+
+	</Product>
+	
+  <Element>
+  </Element>
+</data>

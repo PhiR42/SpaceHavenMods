@@ -2,10 +2,13 @@
   <name>Water cycle</name>
   <description>Changes the water processing to relieve logistics
   
-  The underlying ideas:
+  The underlying philosophy:
   - Ice and water have the same density, which leads to 1 ice being purified into 1 water instead of 5
-  - some processes are updated to keep the economy in balance. O2 balance shouldn't change. 
+  - some processes are updated to keep the economy in balance (all water requirements divided by 5). O2 balance shouldn't change. 
+  
+  Additions:
   - crops have also been tweaked to be more unique. Vegs have the best output/water, fruits are a bit slower, and meat needs chemicals as well as water. 
+  - it is now possible to recycle human and monster meat to water and carbon or chemicals respectively. 
   - trading prices should correlate with the rarity/usefulness of an item, so water should be more expensive than ice (energy cost)
   - Vegs are new cheaper than Fruits, which are cheaper than meat to reflect cost/time of growing
 
@@ -14,7 +17,7 @@
 <knownIssues></knownIssues>
   <website>https://github.com/PhiR42/SpaceHavenMods</website>
   <updates>https://github.com/PhiR42/SpaceHavenMods/raw/master/WaterCycle-latest.zip</updates>
-  <modVersion>0.1</modVersion>
+  <modVersion>0.2</modVersion>
   <author>PhiR</author>
   <minimumLoaderVersion>0.0.6</minimumLoaderVersion>
   <gameVersions>
